@@ -15,6 +15,9 @@
     pages[el.getAttribute('data-page')] = el;
   });
 
+  // Views that replace the home page rather than scrolling to a section.
+  var PAGES = ['contact', 'intake', 'article'];
+
   var current = 'home';
 
   function showPage(name) {
@@ -34,7 +37,7 @@
   }
 
   function go(id, smooth) {
-    if (id === 'contact' || id === 'intake') {
+    if (PAGES.indexOf(id) > -1) {
       showPage(id);
       window.scrollTo({ top: 0 });
       setHash(id);
@@ -64,8 +67,12 @@
   });
 
   var initial = (location.hash || '').replace('#', '');
-  if (initial === 'contact' || initial === 'intake') {
+  if (PAGES.indexOf(initial) > -1) {
     showPage(initial);
+    // These views carry the hash as an element id, so the browser's own
+    // fragment jump scrolls them under the sticky header. Undo it.
+    window.scrollTo({ top: 0 });
+    window.addEventListener('load', function () { window.scrollTo({ top: 0 }); });
   } else if (initial) {
     // Sections live on the home page; jump there once layout has settled.
     window.addEventListener('load', function () { go(initial, false); });
@@ -73,7 +80,7 @@
 
   window.addEventListener('hashchange', function () {
     var h = (location.hash || '').replace('#', '');
-    if (h === 'contact' || h === 'intake') { showPage(h); window.scrollTo({ top: 0 }); }
+    if (PAGES.indexOf(h) > -1) { showPage(h); window.scrollTo({ top: 0 }); }
     else if (h) { go(h, false); }
   });
 
