@@ -169,6 +169,10 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 .h1-hero__muted { color: var(--sage); }
 
+/* Tonal emphasis inside a headline. Sage, not gold: the brand doc allows
+   one gold element per composition and no gold headlines. */
+.h2__muted { color: var(--sage); }
+
 .h2 {
   font-family: var(--display);
   font-weight: 900;
