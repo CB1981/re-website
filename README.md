@@ -1,25 +1,107 @@
-# CODING AGENTS: READ THIS FIRST
+# Re. — website
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+The Re. landing page: a single-page site for the hospitality advisory, built as plain
+HTML, CSS and JavaScript. No build step, no framework, no dependencies.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+**Live at:** https://re-agency.me
 
-## What you should do — IMPORTANT
+---
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+## What's in here
 
-**Read `project/Re Landing Page.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+```
+index.html            The whole site — home, contact page, intake page
+404.html              Branded not-found page
+assets/css/           styles.css (the design system), fonts.css (@font-face)
+assets/js/site.js     Page routing, contact form, branching intake questionnaire
+assets/fonts/         Poppins + Inter, self-hosted (Latin + Latin-Ext subsets)
+assets/img/           Photography, favicon, social share image
+CNAME                 Custom domain for GitHub Pages
+.github/workflows/    Publishes the site on every push to main
+design/               The original Claude Design handoff — not published
+```
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+`design/` holds the source design files, the brand document and the full design
+conversation. It stays in the repository as a record but is deliberately excluded
+from the published site.
 
-## About the design files
+## How it works
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+The site is one HTML file with three views — **home**, **contact** and **intake** —
+switched in the browser rather than served as separate pages. `#contact` and
+`#intake` are deep-linkable, so you can send someone straight to either.
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+Design tokens live as CSS custom properties at the top of `styles.css`:
 
-## Bundle contents
+| Token | Value | Use |
+| --- | --- | --- |
+| `--forest` | `#1B2E27` | Dark ground, buttons, body text |
+| `--ivory` | `#F6F2EA` | Page ground, type on dark |
+| `--gold` | `#D4AF37` | The dot, accents, progress bar |
+| `--sage` | `#3E5248` | Secondary text on light |
+| `--stone` | `#C8C0B0` | Secondary text on dark |
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Design options needed` project files (HTML prototypes, assets, components)
+Type is Poppins (900 for display, 600 for subheads) and Inter for everything else.
+
+## Forms
+
+Both forms POST JSON to [Formspree](https://formspree.io); submissions arrive by
+email at Charbel@re-agency.me and in the Formspree dashboard.
+
+| Form | Endpoint |
+| --- | --- |
+| Contact | `https://formspree.io/f/xppwayoj` |
+| Intake | `https://formspree.io/f/xkjgwqpq` |
+
+If a request fails the form shows a fallback asking the visitor to email instead.
+The endpoints are in `ENDPOINTS` at the top of `assets/js/site.js`.
+
+> The first submission on each form triggers a one-time confirmation email from
+> Formspree — click the link in it and the rest flow through.
+
+## Editing the content
+
+Almost everything is plain text in `index.html`. The two exceptions live in
+`assets/js/site.js`:
+
+- **Intake questions** — `PATHS` (the four entry paths) and `BRANCHES` (the
+  questions each path asks). Adding a question is one object in the right array.
+- **Contact form chips** — venue type, outlets and preferred contact are in
+  `index.html` as `<button class="chip">` elements.
+
+To swap a photo, drop the new file into `assets/img/` and update the `src`,
+`width` and `height` on that `<img>` in `index.html`.
+
+## Running it locally
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+Opening `index.html` directly from the file system also works, though the fonts
+load more reliably over HTTP.
+
+## Deploying
+
+Every push to `main` triggers `.github/workflows/deploy.yml`, which assembles the
+site and publishes it to GitHub Pages. Nothing to build and nothing to install.
+
+**First-time setup:** in **Settings → Pages**, set *Source* to **GitHub Actions**.
+
+**DNS for re-agency.me** — at your domain registrar, create:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `<your-github-username>.github.io` |
+
+DNS takes anywhere from a few minutes to a few hours. Once it resolves, tick
+**Enforce HTTPS** in Settings → Pages.
+
+---
+
+© 2026 Re. LLC · Abu Dhabi · Rethink. Rebuild. Perform.
