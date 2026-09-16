@@ -2,9 +2,15 @@
 (function () {
   'use strict';
 
+  // Both forms post to the confirmed contact endpoint. The dedicated intake
+  // form (xkjgwqpq) accepted submissions but never delivered them, and its
+  // confirmation email never arrived. Intake submissions stay easy to tell
+  // apart: every one carries source "Re. landing page — intake" and a
+  // subject line naming the sender. Swap `intake` back to its own endpoint
+  // once that form is verified.
   var ENDPOINTS = {
     contact: 'https://formspree.io/f/xppwayoj',
-    intake: 'https://formspree.io/f/xkjgwqpq'
+    intake: 'https://formspree.io/f/xppwayoj'
   };
   var FALLBACK = 'Could not send — email us instead at Charbel@re-agency.me.';
 
