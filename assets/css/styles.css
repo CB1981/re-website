@@ -371,7 +371,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 }
 
 .pillar__label {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--stone);
