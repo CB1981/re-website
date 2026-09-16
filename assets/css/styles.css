@@ -1184,12 +1184,14 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   position: relative;
 }
 
+/* Moss rather than gold: the mark's dot is the one gold element on this
+   screen, and the brand doc allows one per composition. */
 .progress__bar {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  background: var(--gold);
+  background: var(--moss);
   transition: width 0.2s ease;
 }
 
