@@ -7,7 +7,8 @@
   --ivory: #F6F2EA;
   --gold: #D4AF37;
   --sage: #3E5248;
-  --moss: #4A6B57;
+  --moss: #4A6B57;       /* headline emphasis on light grounds */
+  --moss-light: #8FA899; /* the same emphasis, on Forest */
   --stone: #C8C0B0;
   --rule: #DDD6C8;
   --rule-dark: #35493F;
@@ -173,6 +174,9 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 /* Tonal emphasis inside a headline. Green, not gold: the brand doc allows
    one gold element per composition and no gold headlines. */
 .h2__muted { color: var(--moss); }
+
+/* On Forest the emphasis has to go lighter than the Ivory, not darker. */
+.band-forest .h2__muted { color: var(--moss-light); }
 
 .h2 {
   font-family: var(--display);
