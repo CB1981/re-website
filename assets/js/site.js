@@ -1,18 +1,18 @@
-/* Re. — site behaviour: page routing, contact form, branching intake. */
+/* Re. site behaviour: page routing, contact form, branching intake. */
 (function () {
   'use strict';
 
   // Both forms post to the confirmed contact endpoint. The dedicated intake
   // form (xkjgwqpq) accepted submissions but never delivered them, and its
   // confirmation email never arrived. Intake submissions stay easy to tell
-  // apart: every one carries source "Re. landing page — intake" and a
+  // apart: every one carries source "Re. landing page (intake)" and a
   // subject line naming the sender. Swap `intake` back to its own endpoint
   // once that form is verified.
   var ENDPOINTS = {
     contact: 'https://formspree.io/f/xppwayoj',
     intake: 'https://formspree.io/f/xppwayoj'
   };
-  var FALLBACK = 'Could not send — email us instead at Hello@re-agency.me.';
+  var FALLBACK = 'Could not send. Email us instead at Hello@re-agency.me.';
 
   /* ------------------------------------------------------------ routing */
 
@@ -158,8 +158,8 @@
         venue: chipValue(form, 'venue'),
         outlets: chipValue(form, 'outlets'),
         method: chipValue(form, 'method'),
-        _subject: 'Re. website — contact from ' + v.name,
-        source: 'Re. landing page — contact'
+        _subject: 'Re. website: contact from ' + v.name,
+        source: 'Re. landing page (contact)'
       });
       try {
         await post(ENDPOINTS.contact, payload);
@@ -182,10 +182,10 @@
   if (!intakeRoot) return;
 
   var PATHS = [
-    { id: 'concept', label: 'New concept or opening', desc: "You're building something from scratch — a site, an idea, or both." },
+    { id: 'concept', label: 'New concept or opening', desc: "You're building something from scratch: a site, an idea, or both." },
     { id: 'existing', label: 'Improve an existing venue', desc: "It's open. The menu, the kitchen, the team or the numbers need work." },
     { id: 'safety', label: 'Food safety & audits', desc: 'Systems, certification, inspections and the training behind them.' },
-    { id: 'general', label: 'Not sure yet', desc: "A general enquiry — we'll go straight to your details." }
+    { id: 'general', label: 'Not sure yet', desc: "A general enquiry, so we'll go straight to your details." }
   ];
 
   var BRANCHES = {
@@ -203,7 +203,7 @@
       { id: 'outlets', title: 'How many outlets?', kind: 'choice', options: ['1', '2–3', '4–10', '10+'] },
       { id: 'covers', title: 'Covers on a typical day?', hint: 'Across all outlets, roughly.', kind: 'choice', options: ['Under 100', '100–250', '250–500', '500+'] },
       { id: 'stage', title: 'Where is the business today?', kind: 'choice', options: ['Growing', 'Flat', 'Struggling', 'Reopening / repositioning'] },
-      { id: 'area', title: 'Where does it need work?', hint: 'Pick as many as apply — we scope properly on the call.', kind: 'choice', multi: true, options: ['Menu & pricing', 'Kitchen & operations', 'Team & training', 'Numbers & P&L', 'Guest experience', 'Full performance review'] }
+      { id: 'area', title: 'Where does it need work?', hint: 'Pick as many as apply. We scope properly on the call.', kind: 'choice', multi: true, options: ['Menu & pricing', 'Kitchen & operations', 'Team & training', 'Numbers & P&L', 'Guest experience', 'Full performance review'] }
     ],
     safety: [
       { id: 'cert', title: 'Current food safety certification?', kind: 'choice', options: ['None yet', 'HACCP', 'ISO 22000', 'Municipality-approved system', 'Not sure'] },
@@ -236,9 +236,9 @@
       ]);
   }
 
-  function fmt(v) { return Array.isArray(v) ? v.join(', ') : (v || '—'); }
+  function fmt(v) { return Array.isArray(v) ? v.join(', ') : (v || 'Not answered'); }
 
-  // The mark's full stop is a drawn circle, not typography — so a heading
+  // The mark's full stop is a drawn circle, not typography, so a heading
   // that mentions "Re." renders the wordmark rather than typed text. Titles
   // stay plain strings, since they double as Formspree payload keys.
   function withMark(text) {
@@ -285,7 +285,7 @@
       var done = el('div', 'intake-done');
       done.appendChild(el('span', 'thanks__dot')).setAttribute('aria-hidden', 'true');
       done.appendChild(el('h2', null, "Thank you. We'll be in touch."));
-      done.appendChild(el('p', null, 'Charbel reads every intake personally and replies within two working days — usually with a question or two of his own.'));
+      done.appendChild(el('p', null, 'Charbel reads every intake personally and replies within two working days, usually with a question or two of his own.'));
       var back = el('a', 'btn-underline btn-underline--tight', 'Back to site');
       back.href = '#top';
       back.setAttribute('data-go', 'top');
@@ -410,7 +410,7 @@
         row.appendChild(el('span', 'review__label',
           s.kind === 'path' ? 'Enquiry' : s.kind === 'contact' ? 'Contact' : s.title.replace(/\?$/, '')));
         row.appendChild(el('span', 'review__value',
-          s.kind === 'path' ? (pathDef ? pathDef.label : '—')
+          s.kind === 'path' ? (pathDef ? pathDef.label : 'Not answered')
             : s.kind === 'contact' ? [c2.name, c2.company, c2.email, c2.phone, c2.city].filter(Boolean).join(' · ')
               : fmt(state.answers[s.id])));
         row.appendChild(el('span', 'review__edit', 'Edit'));
@@ -458,8 +458,8 @@
       var contact = state.answers.contact || {};
       var payload = {
         enquiry: pathDef ? pathDef.label : '',
-        _subject: 'Re. website — intake from ' + (contact.name || 'unknown'),
-        source: 'Re. landing page — intake'
+        _subject: 'Re. website: intake from ' + (contact.name || 'unknown'),
+        source: 'Re. landing page (intake)'
       };
       all.forEach(function (s) {
         if (s.kind !== 'path' && s.kind !== 'contact' && s.kind !== 'review') {
