@@ -775,6 +775,17 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 .foot-col__link { color: var(--stone); }
 .foot-col__link:hover { color: var(--gold); }
 
+.foot-col__link--action {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 9px;
+  color: var(--ivory);
+  border-bottom: 1px solid var(--rule-dark);
+  padding-bottom: 5px;
+}
+
+.foot-col__link--action:hover { border-bottom-color: var(--gold); }
+
 .foot-social { display: flex; gap: 14px; }
 
 .foot-social a {
