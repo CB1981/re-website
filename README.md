@@ -46,7 +46,7 @@ Type is Poppins (900 for display, 600 for subheads) and Inter for everything els
 ## Forms
 
 Both forms POST JSON to [Formspree](https://formspree.io); submissions arrive by
-email at Charbel@re-agency.me and in the Formspree dashboard.
+email at Hello@re-agency.me and in the Formspree dashboard.
 
 | Form | Endpoint |
 | --- | --- |
