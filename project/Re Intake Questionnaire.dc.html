@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F6F2EA; }
+  a { color: #1B2E27; text-decoration: none; }
+  a:hover { color: #D4AF37; }
+  input, textarea { font-family: Inter, Arial, sans-serif; }
+  input:focus, textarea:focus { outline: none; border-color: #1B2E27 !important; }
+</style>
+</helmet>
+
+<div style="font-family: Inter, Arial, sans-serif; color: #1B2E27; background: #F6F2EA; min-height: {{ minH }}; display: flex; flex-direction: column;">
+
+  <sc-if value="{{ chrome }}" hint-placeholder-val="{{ false }}">
+  <header style="border-bottom: 1px solid #DDD6C8;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="Re%20Landing%20Page.dc.html" style="display: inline-flex; align-items: baseline; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: -0.03em; color: #1B2E27;"><span>Re</span><span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span></a>
+      <a href="Re%20Landing%20Page.dc.html" style="font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;">← Back to site</a>
+    </div>
+  </header>
+  </sc-if>
+
+  <main style="flex: 1; max-width: 800px; width: 100%; margin: 0 auto; padding: 72px 32px 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px;">
+
+    <sc-if value="{{ useEmbed }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">Project intake</div>
+        <h1 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(32px, 4.5vw, 52px); line-height: 1.05; letter-spacing: -0.02em;">Tell us about your project.</h1>
+        <iframe src="{{ embedUrl }}" style="width: 100%; height: 1400px; border: 1px solid #DDD6C8; background: #FFFFFF;" title="Re. intake form"></iframe>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;"><span>{{ pathLabel }}</span><span>{{ stepLabel }}</span></div>
+        <div style="height: 2px; background: #DDD6C8; position: relative;"><div style="position: absolute; left: 0; top: 0; height: 100%; background: #D4AF37; width: {{ progress }};"></div></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 28px; min-height: 380px;">
+        <h1 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance;">{{ q.title }}</h1>
+        <sc-if value="{{ q.hint }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3E5248; max-width: 560px; text-wrap: pretty;">{{ q.hint }}</p></sc-if>
+
+        <sc-if value="{{ isPath }}" hint-placeholder-val="{{ true }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px;">
+            <sc-for list="{{ paths }}" as="p" hint-placeholder-count="4">
+              <button onClick="{{ p.pick }}" style="text-align: left; padding: 26px 24px; font-family: Inter, Arial, sans-serif; color: {{ p.color }}; background: {{ p.bg }}; border: 1px solid {{ p.border }}; cursor: pointer; display: flex; flex-direction: column; gap: 10px;" style-hover="border-color: #1B2E27;">
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: {{ p.dot }}; border: 1px solid {{ p.dotBorder }};"></span>
+                <span style="font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">{{ p.label }}</span>
+                <span style="font-size: 14px; line-height: 1.5; color: {{ p.sub }};">{{ p.desc }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isChoice }}" hint-placeholder-val="{{ false }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;">
+            <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+              <button onClick="{{ o.pick }}" style="text-align: left; padding: 18px 20px; font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.4; color: {{ o.color }}; background: {{ o.bg }}; border: 1px solid {{ o.border }}; cursor: pointer; display: flex; align-items: center; gap: 14px;" style-hover="border-color: #1B2E27;">
+                <span style="width: 12px; height: 12px; border-radius: 50%; flex: none; background: {{ o.dot }}; border: 1px solid {{ o.dotBorder }};"></span>
+                <span>{{ o.label }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isText }}" hint-placeholder-val="{{ false }}">
+          <textarea value="{{ textValue }}" onChange="{{ setText }}" placeholder="{{ q.placeholder }}" rows="4" style="width: 100%; box-sizing: border-box; padding: 18px 20px; font-size: 16px; line-height: 1.55; color: #1B2E27; background: #FFFFFF; border: 1px solid #C8C0B0; resize: vertical;"></textarea>
+        </sc-if>
+
+        <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+            <sc-for list="{{ contactFields }}" as="f" hint-placeholder-count="6">
+              <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">
+                <span>{{ f.label }}</span>
+                <input type="{{ f.type }}" value="{{ f.value }}" onChange="{{ f.set }}" placeholder="{{ f.placeholder }}" style="padding: 14px 16px; font-size: 16px; color: #1B2E27; background: #FFFFFF; border: 1px solid #C8C0B0; letter-spacing: 0; text-transform: none;">
+              </label>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isReview }}" hint-placeholder-val="{{ false }}">
+          <div style="background: #FFFFFF; border: 1px solid #DDD6C8; display: flex; flex-direction: column;">
+            <sc-for list="{{ review }}" as="r" hint-placeholder-count="6">
+              <button onClick="{{ r.go }}" style="display: grid; grid-template-columns: 180px minmax(0, 1fr) auto; gap: 16px; align-items: baseline; text-align: left; padding: 16px 20px; border: none; border-bottom: 1px solid #EDE8DD; background: none; font-family: Inter, Arial, sans-serif; cursor: pointer;" style-hover="background: #F6F2EA;">
+                <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">{{ r.label }}</span>
+                <span style="font-size: 15px; line-height: 1.45; color: #1B2E27;">{{ r.value }}</span>
+                <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #D4AF37;">Edit</span>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+
+      <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}"><div style="font-size: 14px; line-height: 1.5; color: #7A1F24;">{{ error }}</div></sc-if>
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #DDD6C8; padding-top: 28px; flex-wrap: wrap;">
+        <button onClick="{{ back }}" style="background: none; border: none; padding: 14px 4px; font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #3E5248; cursor: pointer; visibility: {{ backVis }};">← Back</button>
+        <button onClick="{{ next }}" disabled="{{ nextDisabled }}" style="background: #1B2E27; color: #F6F2EA; border: none; padding: 16px 28px; font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; opacity: {{ nextOpacity }}; visibility: {{ nextVis }};">{{ nextLabel }}</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 28px; padding: 48px 0;">
+        <div style="width: 16px; height: 16px; border-radius: 50%; background: #D4AF37;"></div>
+        <h1 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(32px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance;">Thank you. We'll be in touch.</h1>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3E5248; max-width: 520px; text-wrap: pretty;">Charbel reads every intake personally and replies within two working days — usually with a question or two of his own.</p>
+        <a href="Re%20Landing%20Page.dc.html" style="align-self: flex-start; padding: 14px 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 2px solid #D4AF37;">Back to site</a>
+      </div>
+    </sc-if>
+
+  </main>
+
+  <sc-if value="{{ chrome }}" hint-placeholder-val="{{ false }}">
+  <footer style="border-top: 1px solid #DDD6C8;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3E5248;">
+      <span>Rethink. Rebuild. Perform.</span><span>© 2026 Re. LLC · UAE</span>
+    </div>
+  </footer>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;googleFormUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Backend&quot;}}">
+class Component extends DCLogic {
+  state = { step: 0, answers: {}, done: false, sending: false, error: '' };
+  pathDefs = [
+    { id: 'concept', label: 'New concept or opening', desc: 'You\'re building something from scratch — a site, an idea, or both.' },
+    { id: 'existing', label: 'Improve an existing venue', desc: 'It\'s open. The menu, the kitchen, the team or the numbers need work.' },
+    { id: 'safety', label: 'Food safety & audits', desc: 'Systems, certification, inspections and the training behind them.' },
+    { id: 'general', label: 'Not sure yet', desc: 'A general enquiry — we\'ll go straight to your details.' },
+  ];
+  branches = {
+    concept: [
+      { id: 'idea', title: 'What\'s the concept?', hint: 'Cuisine, format, the one-line idea. Rough is fine.', kind: 'text', placeholder: 'e.g. 60-seat Levantine grill with a bakery counter, Saadiyat.' },
+      { id: 'location', title: 'Is the location secured?', kind: 'choice', options: ['Yes, signed', 'In negotiation', 'Still looking', 'No site yet'] },
+      { id: 'opening', title: 'Target opening?', kind: 'choice', options: ['Within 3 months', '3–6 months', '6–12 months', 'Over a year', 'Not set'] },
+      { id: 'seats', title: 'How many seats?', kind: 'choice', options: ['Under 40', '40–80', '80–150', '150+', 'Not decided'] },
+      { id: 'investment', title: 'Investment range?', hint: 'Total project budget, fit-out included.', kind: 'choice', options: ['Under AED 500k', 'AED 500k – 1.5M', 'AED 1.5M – 5M', 'AED 5M+', 'Not decided'] },
+      { id: 'have', title: 'What do you already have?', hint: 'Pick everything that exists today.', kind: 'choice', multi: true, options: ['Brand / name', 'Chef', 'Site', 'Menu', 'Business plan', 'Investors', 'Nothing yet'] },
+      { id: 'need', title: 'What do you need from Re.?', hint: 'Pick as many as apply.', kind: 'choice', multi: true, options: ['Concept development', 'Menu & recipe costing', 'Kitchen design & flow', 'Financial model', 'Pre-opening & launch', 'Everything'] },
+    ],
+    existing: [
+      { id: 'type', title: 'What kind of venue is it?', kind: 'choice', options: ['Restaurant', 'Café / bakery', 'Bar / lounge', 'Hotel F&B', 'Catering / production', 'Multi-concept group'] },
+      { id: 'outlets', title: 'How many outlets?', kind: 'choice', options: ['1', '2–3', '4–10', '10+'] },
+      { id: 'covers', title: 'Covers on a typical day?', hint: 'Across all outlets, roughly.', kind: 'choice', options: ['Under 100', '100–250', '250–500', '500+'] },
+      { id: 'stage', title: 'Where is the business today?', kind: 'choice', options: ['Growing', 'Flat', 'Struggling', 'Reopening / repositioning'] },
+      { id: 'area', title: 'Where does it need work?', hint: 'Pick as many as apply — we scope properly on the call.', kind: 'choice', multi: true, options: ['Menu & pricing', 'Kitchen & operations', 'Team & training', 'Numbers & P&L', 'Guest experience', 'Full performance review'] },
+    ],
+    safety: [
+      { id: 'cert', title: 'Current food safety certification?', kind: 'choice', options: ['None yet', 'HACCP', 'ISO 22000', 'Municipality-approved system', 'Not sure'] },
+      { id: 'audit', title: 'Last audit or municipality grade?', kind: 'choice', options: ['A / passed', 'B / minor issues', 'C or below', 'Never audited', 'Not sure'] },
+      { id: 'kitchens', title: 'How many kitchens?', kind: 'choice', options: ['1', '2–3', '4–10', '10+'] },
+      { id: 'team', title: 'Is there a food safety lead in-house?', kind: 'choice', options: ['Yes, dedicated', 'Yes, part of another role', 'No'] },
+      { id: 'need', title: 'What do you need from Re.?', hint: 'Pick as many as apply.', kind: 'choice', multi: true, options: ['System set-up (HACCP)', 'Audit & gap report', 'Team training', 'Ongoing monitoring', 'Inspection preparation'] },
+    ],
+    general: [],
+  };
+  contactDefs = [
+    { id: 'name', label: 'Name', type: 'text', placeholder: 'Full name' },
+    { id: 'company', label: 'Company / venue', type: 'text', placeholder: 'Venue or group' },
+    { id: 'role', label: 'Role', type: 'text', placeholder: 'Owner, GM, F&B Director…' },
+    { id: 'email', label: 'Email', type: 'email', placeholder: 'you@company.com' },
+    { id: 'phone', label: 'Phone / WhatsApp', type: 'tel', placeholder: '+971 …' },
+    { id: 'city', label: 'City', type: 'text', placeholder: 'Abu Dhabi, Dubai, Riyadh…' },
+  ];
+  steps() {
+    const path = this.state.answers.path;
+    const branch = path ? this.branches[path] : [];
+    return [
+      { id: 'path', title: 'What brings you to Re.?', kind: 'path' },
+      ...branch,
+      { id: 'contact', title: 'How do we reach you?', kind: 'contact' },
+      { id: 'review', title: 'Check and send.', hint: 'Tap any line to change it.', kind: 'review' },
+    ];
+  }
+  fmt(v) { return Array.isArray(v) ? v.join(', ') : (v || '—'); }
+  renderVals() {
+    const embedUrl = this.props.googleFormUrl ?? '';
+    const useEmbed = !!embedUrl;
+    const { step, answers, done } = this.state;
+    const steps = this.steps();
+    const total = steps.length;
+    const q = steps[Math.min(step, total - 1)];
+    const a = answers[q.id];
+    const isPath = q.kind === 'path', isChoice = q.kind === 'choice', isText = q.kind === 'text', isContact = q.kind === 'contact', isReview = q.kind === 'review';
+    const setA = (id, v) => this.setState(s => ({ answers: { ...s.answers, [id]: v } }));
+    const paths = this.pathDefs.map(p => {
+      const on = answers.path === p.id;
+      return { ...p, pick: () => this.setState(s => ({ answers: { path: p.id, contact: s.answers.contact }, step: 1 })), bg: on ? '#1B2E27' : '#FFFFFF', color: on ? '#F6F2EA' : '#1B2E27', sub: on ? '#C8C0B0' : '#3E5248', border: on ? '#1B2E27' : '#C8C0B0', dot: on ? '#D4AF37' : 'transparent', dotBorder: on ? '#D4AF37' : '#1B2E27' };
+    });
+    const options = (q.options || []).map(label => {
+      const on = q.multi ? (Array.isArray(a) && a.includes(label)) : a === label;
+      const pick = q.multi
+        ? () => { const cur = Array.isArray(a) ? a : []; setA(q.id, cur.includes(label) ? cur.filter(x => x !== label) : [...cur, label]); }
+        : () => setA(q.id, label);
+      return { label, pick, bg: on ? '#1B2E27' : '#FFFFFF', color: on ? '#F6F2EA' : '#1B2E27', border: on ? '#1B2E27' : '#C8C0B0', dot: on ? '#D4AF37' : 'transparent', dotBorder: on ? '#D4AF37' : '#1B2E27' };
+    });
+    const contact = answers.contact || {};
+    const contactFields = this.contactDefs.map(f => ({ ...f, value: contact[f.id] || '', set: e => { const v = e.target.value; this.setState(s => ({ answers: { ...s.answers, contact: { ...(s.answers.contact || {}), [f.id]: v } } })); } }));
+    const contactOk = !!(contact.name && contact.email && contact.email.includes('@'));
+    const pathDef = this.pathDefs.find(p => p.id === answers.path);
+    const review = steps.filter(s => s.kind !== 'review').map((s, i) => ({
+      label: s.kind === 'path' ? 'Enquiry' : s.kind === 'contact' ? 'Contact' : s.title.replace(/\?$/, ''),
+      value: s.kind === 'path' ? (pathDef ? pathDef.label : '—') : s.kind === 'contact' ? [contact.name, contact.company, contact.email, contact.phone, contact.city].filter(Boolean).join(' · ') : this.fmt(answers[s.id]),
+      go: () => this.setState({ step: i }),
+    }));
+    const answered = isPath ? !!answers.path : isChoice ? (q.multi ? Array.isArray(a) && a.length > 0 : !!a) : isText ? !!(a && a.trim()) : isContact ? contactOk : true;
+    const embedded = !!this.props.embedded;
+    return {
+      chrome: !embedded, minH: embedded ? 'auto' : '100vh',
+      useEmbed, embedUrl, showForm: !useEmbed && !done, done: !useEmbed && done,
+      q, pathLabel: pathDef ? pathDef.label : 'Project intake', stepLabel: `Step ${step + 1} of ${total}`, progress: `${Math.round(((step + 1) / total) * 100)}%`,
+      isPath, isChoice, isText, isContact, isReview, paths, options, contactFields, review,
+      textValue: isText ? (a || '') : '', setText: e => setA(q.id, e.target.value),
+      backVis: step === 0 ? 'hidden' : 'visible', back: () => this.setState(s => ({ step: Math.max(0, s.step - 1) })),
+      nextVis: isPath ? 'hidden' : 'visible', nextLabel: isReview ? (this.state.sending ? 'Sending…' : 'Send') : 'Continue', nextDisabled: !answered || !!this.state.sending, nextOpacity: answered && !this.state.sending ? 1 : 0.4,
+      error: this.state.error || '',
+      next: async () => {
+        if (!answered || this.state.sending) return;
+        if (!isReview) { this.setState(s => ({ step: s.step + 1 })); return; }
+        this.setState({ sending: true, error: '' });
+        const ans = this.state.answers;
+        const payload = { enquiry: pathDef ? pathDef.label : '', _subject: 'Re. website — intake from ' + (contact.name || 'unknown'), source: 'Re. landing page — intake' };
+        for (const s of steps) if (s.kind !== 'path' && s.kind !== 'contact' && s.kind !== 'review') payload[s.title.replace(/\?$/, '')] = this.fmt(ans[s.id]);
+        Object.assign(payload, contact);
+        try {
+          const r = await fetch('https://formspree.io/f/xkjgwqpq', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
+          if (!r.ok) throw new Error('bad status');
+          this.setState({ done: true, sending: false });
+        } catch (_) {
+          this.setState({ sending: false, error: 'Could not send — email us instead at Charbel@re-agency.me.' });
+        }
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

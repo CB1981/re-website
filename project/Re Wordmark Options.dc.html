@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Bodoni+Moda:opsz,wght@6..96,700;6..96,900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@700&family=DM+Serif+Display&family=Gloock&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #E8E4DC; }
+  a { color: #0A0A0A; }
+  a:hover { color: #D4AF37; }
+</style>
+</helmet>
+
+<div style="--dot-scale: {{ dotScale }}; padding: 56px; font-family: Inter, Arial, Helvetica, sans-serif; color: #0A0A0A; display: flex; flex-direction: column; gap: 72px;">
+
+<section style="display: flex; flex-direction: column; gap: 28px;">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; border-bottom: 1px solid #C8C0B0; padding-bottom: 18px;">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px;">
+      <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4A4A;">Turn 03 · From your reference</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 1.1; font-weight: 700;">Forest ground, ivory letters, two descriptor lines.</div>
+      <div style="font-size: 14px; line-height: 1.55; color: #4A4A4A; text-wrap: pretty;">Rebuilt as live type so it can be refined. The leaf and the tagline inside the lock-up both break the guideline — <a href="#3a">3a</a> keeps them as drawn, <a href="#3b">3b</a> to <a href="#3d">3d</a> test how much can come off before it stops being this logo.</div>
+    </div>
+    <img src="uploads/WhatsApp Image 2026-09-07 at 10.49.52 PM.jpeg" alt="Reference" style="width: 300px; height: auto; border: 1px solid #C8C0B0; display: block;">
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 28px;">
+
+    <div id="3a" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">3A</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">As referenced</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">DM Serif · leaf · two lines</span>
+      </div>
+      <div style="background: #1E3128; padding: 56px 24px 48px; display: flex; flex-direction: column; align-items: center; gap: 22px;">
+        <div style="position: relative; display: inline-flex; align-items: baseline; font-family: 'DM Serif Display', Georgia, serif; font-size: 150px; line-height: 1; letter-spacing: -0.02em; color: #F6F2EA;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.26em; height: 0.26em; border-radius: 50%; background: #C29A4B; margin-left: 0.06em;"></span>
+          <svg viewBox="0 0 60 60" style="position: absolute; left: 0.30em; bottom: -0.01em; width: 0.42em; height: 0.42em; transform: rotate(-42deg); transform-origin: 10% 90%;" aria-hidden="true"><path d="M4 56 C2 26 22 6 58 2 C56 40 34 58 4 56 Z" fill="#F6F2EA"></path><path d="M7 53 L50 10" stroke="#1E3128" stroke-width="2.6" fill="none"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 18px; font-size: 15px; letter-spacing: 0.36em; text-transform: uppercase; color: #F6F2EA;"><span>Consulting</span><span style="width: 1px; height: 16px; background: #F6F2EA; opacity: 0.6;"></span><span>Training</span></div>
+        <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">People · Food · Planet in harmony</div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">The reference, rebuilt in live type. Leaf sits in the R's leg; dot warmed to a muted gold #C29A4B to match the image.</div>
+    </div>
+
+    <div id="3b" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">3B</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Leaf off</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">DM Serif · one line</span>
+      </div>
+      <div style="background: #1E3128; padding: 56px 24px 48px; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'DM Serif Display', Georgia, serif; font-size: 150px; line-height: 1; letter-spacing: -0.02em; color: #F6F2EA;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.26em; height: 0.26em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 18px; font-size: 15px; letter-spacing: 0.36em; text-transform: uppercase; color: #F6F2EA;"><span>Consulting</span><span style="width: 1px; height: 16px; background: #F6F2EA; opacity: 0.6;"></span><span>Training</span></div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Same lock-up, no leaf, tagline removed. The green ground now carries the sustainability message on its own; dot back to Re. Gold.</div>
+    </div>
+
+    <div id="3c" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">3C</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Ivory reverse</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Forest letters on Ivory</span>
+      </div>
+      <div style="background: #F6F2EA; border-top: 1px solid #C8C0B0; border-bottom: 1px solid #C8C0B0; padding: 56px 24px 48px; display: flex; flex-direction: column; align-items: center; gap: 22px;">
+        <div style="position: relative; display: inline-flex; align-items: baseline; font-family: 'DM Serif Display', Georgia, serif; font-size: 150px; line-height: 1; letter-spacing: -0.02em; color: #1E3128;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.26em; height: 0.26em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+          <svg viewBox="0 0 60 60" style="position: absolute; left: 0.30em; bottom: -0.01em; width: 0.42em; height: 0.42em; transform: rotate(-42deg); transform-origin: 10% 90%;" aria-hidden="true"><path d="M4 56 C2 26 22 6 58 2 C56 40 34 58 4 56 Z" fill="#1E3128"></path><path d="M7 53 L50 10" stroke="#F6F2EA" stroke-width="2.6" fill="none"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 18px; font-size: 15px; letter-spacing: 0.36em; text-transform: uppercase; color: #1E3128;"><span>Consulting</span><span style="width: 1px; height: 16px; background: #1E3128; opacity: 0.6;"></span><span>Training</span></div>
+        <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #4A4A4A;">People · Food · Planet in harmony</div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">The light-background version the reference needs for documents and invoices. Forest replaces Noir as the type colour.</div>
+    </div>
+
+    <div id="3d" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">3D</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Horizontal</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Mark left · descriptor right</span>
+      </div>
+      <div style="background: #1E3128; padding: 70px 24px; display: flex; align-items: center; justify-content: center; gap: 26px;">
+        <div style="position: relative; display: inline-flex; align-items: baseline; font-family: 'DM Serif Display', Georgia, serif; font-size: 118px; line-height: 1; letter-spacing: -0.02em; color: #F6F2EA;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.26em; height: 0.26em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+          <svg viewBox="0 0 60 60" style="position: absolute; left: 0.30em; bottom: -0.01em; width: 0.42em; height: 0.42em; transform: rotate(-42deg); transform-origin: 10% 90%;" aria-hidden="true"><path d="M4 56 C2 26 22 6 58 2 C56 40 34 58 4 56 Z" fill="#F6F2EA"></path><path d="M7 53 L50 10" stroke="#1E3128" stroke-width="2.6" fill="none"></path></svg>
+        </div>
+        <div style="width: 1px; align-self: stretch; background: #C8C0B0; opacity: 0.5;"></div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #F6F2EA; line-height: 1.5;">
+          <span>Consulting</span>
+          <span>Training</span>
+          <span style="font-size: 9px; color: #C8C0B0; letter-spacing: 0.26em;">People · Food · Planet</span>
+        </div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Same parts, landscape. Fits a website header, email signature and the LinkedIn banner where the stacked version runs too tall.</div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 40px; background: #F6F2EA; border: 1px solid #C8C0B0; padding: 24px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 14px;">
+      <div style="width: 84px; height: 84px; background: #1E3128; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-size: 9px; letter-spacing: 0.1em; color: #F6F2EA;">Forest<br>#1E3128</div>
+      <div style="width: 84px; height: 84px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-size: 9px; letter-spacing: 0.1em; color: #4A4A4A;">Ivory<br>#F6F2EA</div>
+      <div style="width: 84px; height: 84px; background: #C29A4B; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-size: 9px; letter-spacing: 0.1em; color: #0A0A0A;">Ref. gold<br>#C29A4B</div>
+      <div style="width: 84px; height: 84px; background: #D4AF37; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-size: 9px; letter-spacing: 0.1em; color: #0A0A0A;">Re. Gold<br>#D4AF37</div>
+    </div>
+    <div style="border-left: 1px solid #C8C0B0; padding-left: 40px; max-width: 520px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">If this direction wins, Forest joins the palette as the ground for covers and the sustainability pillar, and the guideline rules on symbols and lock-ups get rewritten to permit the leaf and the descriptor.</div>
+  </div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 28px;">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; border-bottom: 1px solid #C8C0B0; padding-bottom: 18px;">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px;">
+      <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4A4A;">Turn 02 · More constructions, then colour</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 1.1; font-weight: 700;">Four more marks. Then the dot in eight colours.</div>
+      <div style="font-size: 14px; line-height: 1.55; color: #4A4A4A; text-wrap: pretty;">The guidelines fix the dot at Re. Gold. The colour row below tests that rule on purpose — every tile except the first is off-guideline and labelled as such.</div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 28px;">
+
+    <div id="2a" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">2A</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Calligraphic</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Cormorant Garamond 700</span>
+      </div>
+      <div style="position: relative; padding: 60px 24px 58px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 150px; line-height: 1; letter-spacing: -0.01em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.20em * var(--dot-scale, 1)); height: calc(0.20em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span>
+        </div>
+      </div>
+      <div style="background: #0A0A0A; padding: 26px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 60px; line-height: 1; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.20em; height: 0.20em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span>
+        </div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Old-style serif with a pen-drawn feel. Warm and hotel-like; the least "consultancy" of the set.</div>
+    </div>
+
+    <div id="2b" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">2B</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Modern slab-ish</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">DM Serif Display</span>
+      </div>
+      <div style="position: relative; padding: 66px 24px 58px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 132px; line-height: 1; letter-spacing: -0.02em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.26em * var(--dot-scale, 1)); height: calc(0.26em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+      </div>
+      <div style="background: #0A0A0A; padding: 30px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'DM Serif Display', Georgia, serif; font-size: 54px; line-height: 1; letter-spacing: -0.02em; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.26em; height: 0.26em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Rounder, friendlier bowls with moderate contrast. Survives small sizes and screens better than any didone.</div>
+    </div>
+
+    <div id="2c" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">2C</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Heavy poster</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Gloock</span>
+      </div>
+      <div style="position: relative; padding: 66px 24px 58px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: Gloock, Georgia, serif; font-weight: 400; font-size: 132px; line-height: 1; letter-spacing: -0.02em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.28em * var(--dot-scale, 1)); height: calc(0.28em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+      </div>
+      <div style="background: #0A0A0A; padding: 30px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: Gloock, Georgia, serif; font-size: 54px; line-height: 1; letter-spacing: -0.02em; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Maximum ink. Reads from across a room; the dot has to grow to hold its own against the stems.</div>
+    </div>
+
+    <div id="2d" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">2D</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">The lifted dot</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Playfair 900 · dot at x-height</span>
+      </div>
+      <div style="position: relative; padding: 66px 24px 58px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 128px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.22em * var(--dot-scale, 1)); height: calc(0.22em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.08em; transform: translateY(-0.28em);"></span>
+        </div>
+      </div>
+      <div style="background: #0A0A0A; padding: 30px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.22em; height: 0.22em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em; transform: translateY(-0.28em);"></span>
+        </div>
+      </div>
+      <div style="padding: 18px 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Off-guideline: the dot floats to mid x-height, reading as a bullet or a "Re:" rather than a full stop. Less final, more conversational.</div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #4A4A4A;">Colour · the dot, on <a href="#1b">1b</a> — one in-spec, seven off-guideline</div>
+    <div style="display: grid; grid-template-columns: repeat(4, 260px); gap: 14px;">
+      <div id="2e" style="background: #F6F2EA; border: 1px solid #C8C0B0; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A;"><span>2E · Re. Gold</span><span style="color: #D4AF37;">In spec</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #4A4A4A;">#D4AF37 on Ivory</div>
+      </div>
+      <div id="2f" style="background: #F6F2EA; border: 1px solid #C8C0B0; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A;"><span>2F · Brass</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #A8842C; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #4A4A4A;">#A8842C · deeper, less "bank"</div>
+      </div>
+      <div id="2g" style="background: #F6F2EA; border: 1px solid #C8C0B0; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A;"><span>2G · Copper</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #B4643A; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #4A4A4A;">#B4643A · kitchen pans, warmth</div>
+      </div>
+      <div id="2h" style="background: #F6F2EA; border: 1px solid #C8C0B0; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A;"><span>2H · Oxblood</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #7A1F24; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #4A4A4A;">#7A1F24 · wine list, gravitas</div>
+      </div>
+      <div id="2i" style="background: #0A0A0A; border: 1px solid #0A0A0A; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #C8C0B0;"><span>2I · Champagne</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #FFFFFF;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #E8D7A6; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #C8C0B0;">#E8D7A6 on Noir · lighter, glows</div>
+      </div>
+      <div id="2j" style="background: #1B2E27; border: 1px solid #1B2E27; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #C8C0B0;"><span>2J · Gold on forest</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #F6F2EA;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #C8C0B0;">Ground #1B2E27 · sustainability pillar</div>
+      </div>
+      <div id="2k" style="background: #C8C0B0; border: 1px solid #C8C0B0; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A;"><span>2K · Noir on Stone</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #4A4A4A;">Mid-tone ground · guideline says never</div>
+      </div>
+      <div id="2l" style="background: #F6F2EA; border: 1px solid #C8C0B0; height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A;"><span>2L · Inverted</span><span>Off-guideline</span></div>
+        <div style="display: inline-flex; align-items: baseline; align-self: center; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 84px; line-height: 1; letter-spacing: -0.03em; color: #D4AF37;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #0A0A0A; margin-left: 0.07em;"></span></div>
+        <div style="font-size: 10px; letter-spacing: 0.1em; color: #4A4A4A;">Gold letters, Noir dot · gold headline risk</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 28px;">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; border-bottom: 1px solid #C8C0B0; padding-bottom: 18px;">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px;">
+      <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A4A4A;">Turn 01 · The mark</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 1.1; font-weight: 700;">Four constructions of the wordmark.</div>
+      <div style="font-size: 14px; line-height: 1.55; color: #4A4A4A; text-wrap: pretty;">Same rule set every time: two letters, one drawn gold circle on the baseline, nothing else. What changes is the serif and the geometry of the dot — the two decisions that set the tone.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4A4A; text-align: right;">
+      <div>Re. Noir #0A0A0A</div>
+      <div>Re. Gold #D4AF37</div>
+      <div>Ivory #F6F2EA</div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 28px;">
+
+    <div id="1a" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">1A</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">The canon</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Times New Roman Bold</span>
+      </div>
+
+      <div style="position: relative; padding: 66px 24px 58px; display: flex; justify-content: center;">
+        <sc-if value="{{ showGuides }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; left: 24px; right: 24px; bottom: 58px; height: 1px; background: #D4AF37; opacity: 0.5;"></div>
+        </sc-if>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: 132px; line-height: 1; letter-spacing: -0.005em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.24em * var(--dot-scale, 1)); height: calc(0.24em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.05em;"></span>
+        </div>
+      </div>
+
+      <div style="background: #0A0A0A; padding: 30px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: 54px; line-height: 1; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.24em; height: 0.24em; border-radius: 50%; background: #D4AF37; margin-left: 0.05em;"></span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 22px; padding: 20px 24px; border-top: 1px solid #C8C0B0;">
+        <div style="width: 60px; height: 60px; background: #0A0A0A; display: flex; align-items: center; justify-content: center; flex: none;">
+          <div style="width: 17px; height: 17px; border-radius: 50%; background: #D4AF37;"></div>
+        </div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: 30px; line-height: 1; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.24em; height: 0.24em; border-radius: 50%; background: #D4AF37; margin-left: 0.05em;"></span>
+        </div>
+        <div style="font-size: 11px; line-height: 1.5; color: #4A4A4A; margin-left: auto; text-align: right;">Dot ø 24% of cap<br>Gap 0.05 em</div>
+      </div>
+
+      <div style="padding: 0 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Literal reading of the guidelines. Safest, most institutional — and the only version that needs no font licence.</div>
+    </div>
+
+    <div id="1b" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">1B</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Editorial weight</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Playfair Display 900</span>
+      </div>
+
+      <div style="position: relative; padding: 66px 24px 58px; display: flex; justify-content: center;">
+        <sc-if value="{{ showGuides }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; left: 24px; right: 24px; bottom: 58px; height: 1px; background: #D4AF37; opacity: 0.5;"></div>
+        </sc-if>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 128px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.30em * var(--dot-scale, 1)); height: calc(0.30em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span>
+        </div>
+      </div>
+
+      <div style="background: #0A0A0A; padding: 30px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 22px; padding: 20px 24px; border-top: 1px solid #C8C0B0;">
+        <div style="width: 60px; height: 60px; background: #0A0A0A; display: flex; align-items: center; justify-content: center; flex: none;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background: #D4AF37;"></div>
+        </div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 29px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span>
+        </div>
+        <div style="font-size: 11px; line-height: 1.5; color: #4A4A4A; margin-left: auto; text-align: right;">Dot ø 30% of cap<br>Gap 0.07 em</div>
+      </div>
+
+      <div style="padding: 0 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Tightest fit and the biggest dot: reads as a magazine masthead. Strongest at small sizes and on avatars.</div>
+    </div>
+
+    <div id="1c" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">1C</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">High contrast</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Bodoni Moda 700</span>
+      </div>
+
+      <div style="position: relative; padding: 66px 24px 58px; display: flex; justify-content: center;">
+        <sc-if value="{{ showGuides }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; left: 24px; right: 24px; bottom: 58px; height: 1px; background: #D4AF37; opacity: 0.5;"></div>
+        </sc-if>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Bodoni Moda', 'Times New Roman', serif; font-weight: 700; font-size: 128px; line-height: 1; letter-spacing: 0.01em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.19em * var(--dot-scale, 1)); height: calc(0.19em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.13em;"></span>
+        </div>
+      </div>
+
+      <div style="background: #0A0A0A; padding: 30px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Bodoni Moda', 'Times New Roman', serif; font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: 0.01em; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.19em; height: 0.19em; border-radius: 50%; background: #D4AF37; margin-left: 0.13em;"></span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 22px; padding: 20px 24px; border-top: 1px solid #C8C0B0;">
+        <div style="width: 60px; height: 60px; background: #0A0A0A; display: flex; align-items: center; justify-content: center; flex: none;">
+          <div style="width: 13px; height: 13px; border-radius: 50%; background: #D4AF37;"></div>
+        </div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Bodoni Moda', 'Times New Roman', serif; font-weight: 700; font-size: 30px; line-height: 1; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.19em; height: 0.19em; border-radius: 50%; background: #D4AF37; margin-left: 0.13em;"></span>
+        </div>
+        <div style="font-size: 11px; line-height: 1.5; color: #4A4A4A; margin-left: auto; text-align: right;">Dot ø 19% of cap<br>Gap 0.13 em</div>
+      </div>
+
+      <div style="padding: 0 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Hairline serifs, small precise dot set with air around it. The most luxury-facing; watch the thin strokes below 32 px.</div>
+    </div>
+
+    <div id="1d" style="width: 520px; background: #F6F2EA; border: 1px solid #C8C0B0; display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #C8C0B0;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #D4AF37;">1D</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px;">Narrow display</span>
+        </div>
+        <span style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A4A4A;">Instrument Serif</span>
+      </div>
+
+      <div style="position: relative; padding: 60px 24px 58px; display: flex; justify-content: center;">
+        <sc-if value="{{ showGuides }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; left: 24px; right: 24px; bottom: 58px; height: 1px; background: #D4AF37; opacity: 0.5;"></div>
+        </sc-if>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 148px; line-height: 1; letter-spacing: -0.01em; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: calc(0.22em * var(--dot-scale, 1)); height: calc(0.22em * var(--dot-scale, 1)); border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+      </div>
+
+      <div style="background: #0A0A0A; padding: 26px 24px; display: flex; justify-content: center;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Instrument Serif', Georgia, serif; font-size: 60px; line-height: 1; color: #FFFFFF;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.22em; height: 0.22em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 22px; padding: 20px 24px; border-top: 1px solid #C8C0B0;">
+        <div style="width: 60px; height: 60px; background: #0A0A0A; display: flex; align-items: center; justify-content: center; flex: none;">
+          <div style="width: 15px; height: 15px; border-radius: 50%; background: #D4AF37;"></div>
+        </div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1; color: #0A0A0A;">
+          <span>Re</span>
+          <span style="display: inline-block; width: 0.22em; height: 0.22em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span>
+        </div>
+        <div style="font-size: 11px; line-height: 1.5; color: #4A4A4A; margin-left: auto; text-align: right;">Dot ø 22% of cap<br>Gap 0.06 em</div>
+      </div>
+
+      <div style="padding: 0 24px 22px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Tall, narrow, contemporary. Takes the least horizontal space — best for a website header and a LinkedIn banner.</div>
+    </div>
+
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: stretch;">
+    <div style="width: 520px; background: #FFFFFF; border: 1px solid #C8C0B0; padding: 24px;">
+      <div style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #4A4A4A; margin-bottom: 18px;">Minimum size · 24 px high</div>
+      <div style="display: flex; align-items: baseline; gap: 34px; flex-wrap: wrap;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: 24px; line-height: 1; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.24em; height: 0.24em; border-radius: 50%; background: #D4AF37; margin-left: 0.05em;"></span></div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 24px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span></div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Bodoni Moda', 'Times New Roman', serif; font-weight: 700; font-size: 24px; line-height: 1; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.19em; height: 0.19em; border-radius: 50%; background: #D4AF37; margin-left: 0.13em;"></span></div>
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Instrument Serif', Georgia, serif; font-size: 27px; line-height: 1; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.22em; height: 0.22em; border-radius: 50%; background: #D4AF37; margin-left: 0.06em;"></span></div>
+      </div>
+      <div style="font-size: 12.5px; line-height: 1.6; color: #4A4A4A; margin-top: 18px; text-wrap: pretty;">Left to right: <a href="#1a">1a</a>, <a href="#1b">1b</a>, <a href="#1c">1c</a>, <a href="#1d">1d</a> at the guideline floor. Below this the dot monogram takes over.</div>
+    </div>
+
+    <div style="width: 520px; background: #0A0A0A; border: 1px solid #0A0A0A; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
+      <div style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #C8C0B0;">Clear space · 2× the dot diameter</div>
+      <div style="align-self: center; border: 1px dashed #4A4A4A; padding: 38px;">
+        <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 62px; line-height: 1; letter-spacing: -0.03em; color: #FFFFFF;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span></div>
+      </div>
+      <div style="font-size: 12.5px; line-height: 1.6; color: #C8C0B0; text-wrap: pretty;">The dashed frame is the exclusion zone, not artwork. Nothing enters it — including the letter-spaced descriptor, which sits outside.</div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 40px; background: #F6F2EA; border: 1px solid #C8C0B0; padding: 30px 24px; flex-wrap: wrap;">
+    <div style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #4A4A4A; width: 100%;">Descriptor lock-up · sits outside the mark, in the body typeface</div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: inline-flex; align-items: baseline; font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 58px; line-height: 1; letter-spacing: -0.03em; color: #0A0A0A;"><span>Re</span><span style="display: inline-block; width: 0.30em; height: 0.30em; border-radius: 50%; background: #D4AF37; margin-left: 0.07em;"></span></div>
+      <div style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #4A4A4A;">Hospitality advisory · Abu Dhabi</div>
+    </div>
+    <div style="border-left: 1px solid #C8C0B0; padding-left: 40px; max-width: 380px; font-size: 12.5px; line-height: 1.6; color: #4A4A4A; text-wrap: pretty;">Tell me which construction to take forward — or which two to cross — and I'll build the reverse, avatar, favicon and banner set from it.</div>
+  </div>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGuides&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Construction&quot;},&quot;dotScale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.6,&quot;max&quot;:1.6,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Construction&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showGuides: this.props.showGuides ?? false,
+      dotScale: this.props.dotScale ?? 1
+    };
+  }
+}
+</script>
+</body>
+</html>

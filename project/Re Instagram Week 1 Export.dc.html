@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>body { margin: 0; background: #E8E4DC; }</style>
+</helmet>
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 40px; font-family: Inter, Arial, sans-serif;">
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+    <sc-for list="{{ post1 }}" as="s" hint-placeholder-count="6">
+      <div id="{{ s.id }}" style="width: 1080px; height: 1350px; background: #1B2E27; color: #F6F2EA; padding: 120px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; flex: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 28px; letter-spacing: 0.22em; text-transform: uppercase; color: #C8C0B0;"><span>{{ s.kicker }}</span><span>{{ s.n }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 46px;">
+          <div style="font-family: Poppins, Arial, sans-serif; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; font-size: {{ s.size }};">{{ s.head }}</div>
+          <sc-if value="{{ s.body }}" hint-placeholder-val="{{ true }}"><div style="font-size: 38px; line-height: 1.5; color: #C8C0B0; text-wrap: pretty;">{{ s.body }}</div></sc-if>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <div style="display: inline-flex; align-items: baseline; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 88px; line-height: 1; letter-spacing: -0.03em;"><span>Re</span><span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span></div>
+          <div style="font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; color: #C8C0B0;">{{ s.foot }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+    <sc-for list="{{ reel }}" as="f" hint-placeholder-count="5">
+      <div id="{{ f.id }}" style="width: 1080px; height: 1350px; background: #1B2E27; color: #F6F2EA; padding: 120px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; flex: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 28px; letter-spacing: 0.22em; text-transform: uppercase; color: #C8C0B0;"><span>Rebuild</span><span>{{ f.n }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 44px;">
+          <div style="font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 84px; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance;">{{ f.text }}</div>
+          <div style="font-size: 38px; line-height: 1.5; color: #C8C0B0; text-wrap: pretty;">{{ f.sub }}</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <div style="display: inline-flex; align-items: baseline; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 88px; line-height: 1; letter-spacing: -0.03em;"><span>Re</span><span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span></div>
+          <div style="font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; color: #C8C0B0;">{{ f.foot }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+    <sc-for list="{{ post3 }}" as="s" hint-placeholder-count="5">
+      <div id="{{ s.id }}" style="width: 1080px; height: 1350px; background: #F6F2EA; color: #1B2E27; padding: 120px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; flex: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 28px; letter-spacing: 0.22em; text-transform: uppercase; color: #3E5248;"><span>{{ s.kicker }}</span><span>{{ s.n }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 46px;">
+          <div style="font-family: Poppins, Arial, sans-serif; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; font-size: {{ s.size }};">{{ s.head }}</div>
+          <sc-if value="{{ s.body }}" hint-placeholder-val="{{ true }}"><div style="font-size: 38px; line-height: 1.5; color: #3E5248; text-wrap: pretty;">{{ s.body }}</div></sc-if>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <div style="display: inline-flex; align-items: baseline; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 88px; line-height: 1; letter-spacing: -0.03em;"><span>Re</span><span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span></div>
+          <div style="font-size: 26px; letter-spacing: 0.18em; text-transform: uppercase; color: #3E5248;">{{ s.foot }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const post1 = [
+      { n: '1 / 6', kicker: 'Rethink', size: '88px', head: 'Would we do this again?', body: 'The only question that fixes a restaurant.', foot: 'Swipe' },
+      { n: '2 / 6', kicker: 'Rethink', size: '76px', head: 'Most venues don\'t have a problem with ideas.', body: 'They have a problem with the things nobody questions anymore. The dish that\'s always been on. The price that\'s always been that. The shift pattern from opening week.', foot: '' },
+      { n: '3 / 6', kicker: 'Rethink', size: '76px', head: 'We start by sitting down.', body: 'In the dining room as a guest. At the pass as a cook. With twelve months of numbers as an owner. Three seats, one week.', foot: '' },
+      { n: '4 / 6', kicker: 'Rethink', size: '76px', head: 'Then we question everything that doesn\'t earn its place.', body: 'Positioning. Menu architecture. Pricing. The guest journey from the door to the bill.', foot: '' },
+      { n: '5 / 6', kicker: 'Rethink', size: '76px', head: 'Nothing is rebuilt until it\'s been rethought.', body: 'That order matters. Fixing the execution of a wrong idea just makes it faster.', foot: '' },
+      { n: '6 / 6', kicker: 'Rethink · Rebuild · Perform', size: '88px', head: 'Something in your venue you\'ve stopped questioning?', body: 'DM us. We\'ll tell you what we\'d do again.', foot: 'Re-agency.me' },
+    ].map((s, i) => ({ ...s, id: 'p1-' + (i + 1) }));
+    const reel = [
+      { t: '0–3 s', text: 'A kitchen doesn\'t get fixed with a memo.', sub: 'It gets fixed at the pass, at 8 pm, on a Thursday.' },
+      { t: '3–6 s', text: 'Workflow. Standards. Procurement.', sub: 'The three things that decide whether the new menu survives service.' },
+      { t: '6–9 s', text: 'Rosters built around covers, not habit.', sub: 'The right people on the right shift — and no one standing still.' },
+      { t: '9–12 s', text: 'And training that holds once we\'ve gone.', sub: 'If it only works when the consultant is in the building, it doesn\'t work.' },
+      { t: '12–15 s', text: 'Rebuild. The second thing Re. does.', sub: 'DM us if your team knows what to do but the shift still falls apart.' },
+    ].map((f, i) => ({ ...f, id: 'p2-' + (i + 1), n: (i + 1) + ' / 5', foot: i === 4 ? 'Re-agency.me' : (i === 0 ? 'Swipe' : '') }));
+    const post3 = [
+      { n: '1 / 5', kicker: 'Perform', size: '88px', head: 'Every engagement ends with a number.', body: 'Not an opinion.', foot: 'Swipe' },
+      { n: '2 / 5', kicker: 'Perform', size: '76px', head: 'Four numbers we watch every week.', body: 'Covers. Spend per head. Food cost. Labour cost. Each against a target agreed in week one.', foot: '' },
+      { n: '3 / 5', kicker: 'Perform', size: '76px', head: 'Weekly, not quarterly.', body: 'A restaurant lives by the week. A budget-versus-actual that arrives in March about January is a history lesson.', foot: '' },
+      { n: '4 / 5', kicker: 'Perform', size: '76px', head: 'Measured, not described.', body: '"It feels busier" is not a result. "Covers up, spend per head flat, food cost down two points" is.', foot: '' },
+      { n: '5 / 5', kicker: 'Rethink · Rebuild · Perform', size: '88px', head: 'Which of your numbers would we look at first?', body: 'DM us and find out.', foot: 'Re-agency.me' },
+    ].map((s, i) => ({ ...s, id: 'p3-' + (i + 1) }));
+    return { post1, reel, post3 };
+  }
+}
+</script>
+</body>
+</html>

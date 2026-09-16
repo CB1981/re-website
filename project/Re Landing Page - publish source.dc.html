@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#1B2E27">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <text x="470" y="520" font-family="Poppins, Arial, sans-serif" font-weight="900" font-size="360" fill="#F6F2EA" letter-spacing="-10">Re</text>
+    <circle cx="905" cy="478" r="50" fill="#D4AF37"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F2EA; }
+  a { color: #1B2E27; text-decoration: none; }
+  a:hover { color: #D4AF37; }
+  input, textarea { font-family: Inter, Arial, sans-serif; }
+  input:focus, textarea:focus { outline: none; border-color: #1B2E27 !important; }
+</style>
+</helmet>
+
+<div style="font-family: Inter, Arial, sans-serif; color: #1B2E27; background: #F6F2EA; min-height: 100vh;">
+
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(246,242,234,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #DDD6C8;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="#top" onClick="{{ go.top }}" style="display: inline-flex; align-items: baseline; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: -0.03em; color: #1B2E27;"><span>Re</span><span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span></a>
+      <nav style="display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; justify-content: flex-end;">
+        <a href="#pillars" onClick="{{ go.pillars }}">Pillars</a>
+        <a href="#services" onClick="{{ go.services }}">Services</a>
+        <a href="#process" onClick="{{ go.process }}">Process</a>
+        <a href="#standards" onClick="{{ go.standards }}">Safety &amp; Planet</a>
+        <a href="#about" onClick="{{ go.about }}">About</a>
+        <a href="#contact" onClick="{{ go.contact }}" style="background: #1B2E27; color: #F6F2EA; padding: 12px 20px;" style-hover="background: #243d33; color: #F6F2EA;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <section id="top" data-screen-label="Hero" style="max-width: 1240px; margin: 0 auto; padding: 96px 32px 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: end;">
+    <div style="display: flex; flex-direction: column; gap: 28px;">
+      <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">Hospitality advisory · UAE</div>
+      <h1 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(44px, 6vw, 84px); line-height: 1; letter-spacing: -0.03em; text-wrap: balance;">We do things again.<br><span style="color: #3E5248;">Better.</span></h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #3E5248; max-width: 520px; text-wrap: pretty;">Re. works alongside owners and operators to rethink concepts, rebuild operations and make restaurants perform — on the floor, in the kitchen and on the P&amp;L.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <a href="#services" onClick="{{ go.services }}" style="background: #1B2E27; color: #F6F2EA; padding: 16px 28px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;" style-hover="background: #243d33; color: #F6F2EA;">Explore services</a>
+        <a href="#process" onClick="{{ go.process }}" style="padding: 16px 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 2px solid #D4AF37;">How we work</a>
+      </div>
+    </div>
+    <div style="position: relative; aspect-ratio: 4 / 5; max-height: 640px;">
+      <image-slot id="hero-photo" shape="rect" placeholder="Hero photo — a dining room or open kitchen, warm light" style="width: 100%; height: 100%;"></image-slot>
+      <div style="position: absolute; left: -24px; bottom: 40px; background: #1B2E27; color: #F6F2EA; padding: 22px 26px; display: flex; flex-direction: column; gap: 6px; max-width: 260px;">
+        <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">Rethink · Rebuild · Perform</div>
+        <div style="font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3;">Every engagement ends with a number, not an opinion.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pillars" data-screen-label="Pillars" style="background: #1B2E27; color: #F6F2EA;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 56px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap;">
+        <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.02em; max-width: 620px;">Three pillars. One way of working.</h2>
+        <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">01 — 03</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: #35493F;">
+        <div style="background: #1B2E27; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 22px;">
+          <div style="width: 14px; height: 14px; border-radius: 50%; background: #D4AF37;"></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">01 · Rethink</div>
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2;">Concept &amp; strategy</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C8C0B0; text-wrap: pretty;">Positioning, menu architecture, pricing and the guest journey — questioned from first principles before anything is rebuilt.</p>
+        </div>
+        <div style="background: #1B2E27; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 22px;">
+          <div style="width: 14px; height: 14px; border-radius: 50%; background: #D4AF37;"></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">02 · Rebuild</div>
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2;">Operations &amp; people</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C8C0B0; text-wrap: pretty;">Kitchen flow, standards, procurement and rosters, then the training that makes them hold once we leave the building.</p>
+        </div>
+        <div style="background: #1B2E27; padding: 40px 36px 44px; display: flex; flex-direction: column; gap: 22px;">
+          <div style="width: 14px; height: 14px; border-radius: 50%; background: #D4AF37;"></div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">03 · Perform</div>
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2;">Commercial performance</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C8C0B0; text-wrap: pretty;">Covers, spend per head, food and labour cost against target — reported weekly, so progress is measured, not described.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" data-screen-label="Services" style="max-width: 1240px; margin: 0 auto; padding: 112px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 64px;">
+    <div style="display: flex; flex-direction: column; gap: 22px; align-self: start; position: sticky; top: 120px;">
+      <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">Services</div>
+      <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.02em;">What we take on.</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3E5248; max-width: 420px; text-wrap: pretty;">Engagements are scoped to one venue or a whole group, and always start with a diagnostic.</p>
+      <a href="#contact" onClick="{{ go.contact }}" style="align-self: flex-start; margin-top: 8px; padding: 14px 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 2px solid #D4AF37;">Discuss a project</a>
+    </div>
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #DDD6C8;">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 20px; padding: 30px 0; border-bottom: 1px solid #DDD6C8;">
+          <div style="font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 13px; color: #D4AF37; padding-top: 6px;">{{ s.num }}</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.25;">{{ s.title }}</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3E5248; text-wrap: pretty;">{{ s.body }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="How we work" style="background: #EDE8DD; border-top: 1px solid #DDD6C8; border-bottom: 1px solid #DDD6C8;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 112px 32px; display: flex; flex-direction: column; gap: 56px;">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 680px;">
+        <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">How we work</div>
+        <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.02em;">Three phases. Ten weeks. One number at the end of each.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 24px; border-top: 2px solid #1B2E27;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;"><span>Phase one</span><span>Weeks 1–3</span></div>
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 24px;">Diagnostic</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3E5248; text-wrap: pretty;">We walk the floor, sit in the kitchen and read the last twelve months. Menu engineering, workflow audit, purchasing and labour against covers.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 24px; border-top: 2px solid #1B2E27;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;"><span>Phase two</span><span>Weeks 4–7</span></div>
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 24px;">Redesign</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3E5248; text-wrap: pretty;">Revised menus with recipe costings, a pricing architecture, standard operating procedures and the training plan to carry them.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 24px; border-top: 2px solid #D4AF37;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;"><span>Phase three</span><span>Weeks 8–10</span></div>
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 24px;">Implementation</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3E5248; text-wrap: pretty;">Coaching on the floor and in the kitchen, a weekly budget-versus-actual, and a hand-over of dashboards your team runs without us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" data-screen-label="Sustainability, health and safety" style="background: #1B2E27; color: #F6F2EA;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: center;">
+    <div style="aspect-ratio: 4 / 3; max-height: 520px;">
+      <image-slot id="standards-photo" shape="rect" placeholder="Photo — kitchen inspection, temperature log or clean pass" style="width: 100%; height: 100%;"></image-slot>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">People, Planet &amp; Safety</div>
+      <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.08; letter-spacing: -0.02em; max-width: 480px; text-wrap: balance;">The standards that sit under everything else.</h2>
+      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C8C0B0; max-width: 460px; text-wrap: pretty;">Built into every engagement, or taken on as standalone work.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #35493F;">
+      <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-bottom: 1px solid #35493F;">
+        <div style="width: 10px; height: 10px; border-radius: 50%; background: #D4AF37; margin-top: 8px;"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Food safety management</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C8C0B0; text-wrap: pretty;">HACCP-based systems, temperature and allergen controls, cleaning schedules and records — set up so the team runs them without a consultant present.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-bottom: 1px solid #35493F;">
+        <div style="width: 10px; height: 10px; border-radius: 50%; background: #D4AF37; margin-top: 8px;"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Health &amp; safety audits</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C8C0B0; text-wrap: pretty;">Unannounced kitchen and floor audits scored against municipal requirements and your own standard, with a ranked fix list and a re-audit date.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-bottom: 1px solid #35493F;">
+        <div style="width: 10px; height: 10px; border-radius: 50%; background: #D4AF37; margin-top: 8px;"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <h3 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Sustainability &amp; waste</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C8C0B0; text-wrap: pretty;">Waste mapping from purchase to plate, sourcing and energy reviewed as cost lines first — measured monthly alongside food cost.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="about" data-screen-label="About" style="max-width: 1240px; margin: 0 auto; padding: 112px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 64px; align-items: center;">
+    <div style="aspect-ratio: 4 / 5; max-height: 560px;">
+      <image-slot id="about-photo" shape="rect" placeholder="Portrait — Charbel Basbous" style="width: 100%; height: 100%;"></image-slot>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">About</div>
+      <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.02em;">Charbel Basbous</h2>
+      <div style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #D4AF37; font-weight: 600;">Co-Founder &amp; Managing Director</div>
+      <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #3E5248; text-wrap: pretty;">Charbel brings over 20 years of hospitality and operational leadership across the UAE, Saudi Arabia and Lebanon. He has led multi-site restaurant groups, new openings, turnarounds and high-profile hospitality projects, with a focus on strategy, operations, commercial performance and guest experience.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #3E5248; text-wrap: pretty;">At Re., he combines hands-on operating experience with a structured advisory approach — so recommendations are ones he has already had to make work himself.</p>
+      <div style="display: flex; gap: 40px; flex-wrap: wrap; padding-top: 12px; border-top: 1px solid #DDD6C8;">
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 34px; line-height: 1;">20+</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">Years operating</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 34px; line-height: 1;">3</span><span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">Markets · UAE, KSA, Lebanon</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="insights" data-screen-label="Insights" style="background: #1B2E27; color: #F6F2EA;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #C8C0B0;">Insights · Featured</div>
+        <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance;">Why most menus are priced from the wrong end.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #C8C0B0; max-width: 520px; text-wrap: pretty;">Cost-plus pricing protects margin on paper and loses it on the floor. A note on building the menu from the guest's cheque backwards.</p>
+        <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+          <a href="#insights" onClick="{{ go.insights }}" style="color: #F6F2EA; padding: 14px 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 2px solid #D4AF37;" style-hover="color: #D4AF37;">Read the piece</a>
+          <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C8C0B0;">6 min · September 2026</span>
+        </div>
+      </div>
+      <div style="aspect-ratio: 3 / 2;">
+        <image-slot id="insight-photo" shape="rect" placeholder="Article image — menu, pass or ledger" style="width: 100%; height: 100%;"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  </sc-if>
+
+  <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+  <section id="contact" data-screen-label="Contact page" style="max-width: 1240px; margin: 0 auto; padding: 72px 32px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 64px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <a href="#top" onClick="{{ go.top }}" style="align-self: flex-start; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #3E5248;">← Back to site</a>
+      <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">Contact</div>
+      <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance;">Tell us what isn't working. We'll tell you what we'd do again.</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3E5248; max-width: 460px; text-wrap: pretty;">Leave your details and we'll come back within two working days. Prefer to go deeper first? The intake takes four minutes.</p>
+      <a href="#intake" onClick="{{ go.intake }}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 14px; background: #D4AF37; color: #1B2E27; padding: 18px 28px; font-family: Poppins, Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: 0 8px 24px rgba(212,175,55,0.35); transition: transform 0.15s ease, box-shadow 0.15s ease;" style-hover="color: #1B2E27; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(212,175,55,0.45);"><span>Start the intake</span><span style="font-size: 18px; line-height: 1;">→</span></a>
+      <a href="mailto:Charbel@re-agency.me" style="padding-top: 24px; border-top: 1px solid #DDD6C8; font-family: Poppins, Arial, sans-serif; font-weight: 600; font-size: 20px; word-break: break-all;">Charbel@re-agency.me</a>
+    </div>
+
+    <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+      <div style="background: #FFFFFF; border: 1px solid #DDD6C8; padding: 40px; display: flex; flex-direction: column; gap: 28px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <sc-for list="{{ fields }}" as="f" hint-placeholder-count="6">
+            <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248; grid-column: {{ f.span }};">
+              <span>{{ f.label }}</span>
+              <input type="{{ f.type }}" value="{{ f.value }}" onChange="{{ f.set }}" placeholder="{{ f.placeholder }}" style="padding: 14px 16px; font-size: 16px; color: #1B2E27; background: #F6F2EA; border: 1px solid #C8C0B0; letter-spacing: 0; text-transform: none;">
+            </label>
+          </sc-for>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">Venue type</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{ venueTypes }}" as="v" hint-placeholder-count="5">
+              <button onClick="{{ v.pick }}" style="padding: 10px 16px; font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 500; color: {{ v.color }}; background: {{ v.bg }}; border: 1px solid {{ v.border }}; cursor: pointer;">{{ v.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">Number of outlets</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ outletOpts }}" as="v" hint-placeholder-count="4">
+                <button onClick="{{ v.pick }}" style="padding: 10px 16px; font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 500; color: {{ v.color }}; background: {{ v.bg }}; border: 1px solid {{ v.border }}; cursor: pointer;">{{ v.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #3E5248;">Preferred contact</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ methodOpts }}" as="v" hint-placeholder-count="3">
+                <button onClick="{{ v.pick }}" style="padding: 10px 16px; font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 500; color: {{ v.color }}; background: {{ v.bg }}; border: 1px solid {{ v.border }}; cursor: pointer;">{{ v.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid #DDD6C8; padding-top: 24px;">
+          <span style="font-size: 13px; color: #3E5248;">{{ note }}</span>
+          <button onClick="{{ submit }}" disabled="{{ disabled }}" style="background: #1B2E27; color: #F6F2EA; border: none; padding: 16px 28px; font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; opacity: {{ opacity }};">Send</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+      <div style="background: #1B2E27; color: #F6F2EA; padding: 48px 40px; display: flex; flex-direction: column; gap: 22px;">
+        <div style="width: 16px; height: 16px; border-radius: 50%; background: #D4AF37;"></div>
+        <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.08; letter-spacing: -0.02em;">Thank you. We'll be in touch.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C8C0B0; text-wrap: pretty;">Charbel replies within two working days — usually with a question or two of his own.</p>
+      </div>
+    </sc-if>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ isIntake }}" hint-placeholder-val="{{ false }}">
+  <section id="intake" data-screen-label="Intake page" style="min-height: 70vh;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 72px 32px 96px; display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px;">
+        <a href="#top" onClick="{{ go.top }}" style="align-self: flex-start; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #3E5248;">← Back to site</a>
+        <div style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #3E5248;">Project intake · 4 minutes</div>
+        <h2 style="margin: 0; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance;">Go deeper before we talk.</h2>
+      </div>
+      <div style="background: #F6F2EA; border: 1px solid #DDD6C8;">
+        <dc-import name="Re Intake Questionnaire" embedded="{{ true }}" hint-size="100%,720px"></dc-import>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <footer style="border-top: 1px solid #DDD6C8;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
+      <div style="display: inline-flex; align-items: baseline; font-family: Poppins, Arial, sans-serif; font-weight: 900; font-size: 28px; line-height: 1; letter-spacing: -0.03em;"><span>Re</span><span style="display: inline-block; width: 0.28em; height: 0.28em; border-radius: 50%; background: #D4AF37; margin-left: 0.08em;"></span></div>
+      <div style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #3E5248;">Rethink. Rebuild. Perform.</div>
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #3E5248;">© 2026 Re. LLC · Abu Dhabi</div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;serviceCount&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:6,&quot;min&quot;:3,&quot;max&quot;:8,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { v: {}, done: false, sending: false, error: '', page: 'home' };
+  componentDidMount() {
+    const h = (location.hash || '').replace('#', '');
+    if (h === 'contact' || h === 'intake') this.setState({ page: h });
+  }
+  defs = [
+    { id: 'name', label: 'Name', type: 'text', placeholder: 'Full name', span: 'auto' },
+    { id: 'company', label: 'Company / venue', type: 'text', placeholder: 'Venue or group', span: 'auto' },
+    { id: 'role', label: 'Role', type: 'text', placeholder: 'Owner, GM, F&B Director…', span: 'auto' },
+    { id: 'city', label: 'City', type: 'text', placeholder: 'Abu Dhabi, Dubai, Riyadh…', span: 'auto' },
+    { id: 'email', label: 'Email', type: 'email', placeholder: 'you@company.com', span: 'auto' },
+    { id: 'phone', label: 'Phone / WhatsApp', type: 'tel', placeholder: '+971 …', span: 'auto' },
+  ];
+  chips(key, labels) {
+    return labels.map(label => {
+      const on = this.state.v[key] === label;
+      return { label, pick: () => this.setState(s => ({ v: { ...s.v, [key]: label } })), bg: on ? '#1B2E27' : '#FFFFFF', color: on ? '#F6F2EA' : '#1B2E27', border: on ? '#1B2E27' : '#C8C0B0' };
+    });
+  }
+  renderVals() {
+    const { v, done } = this.state;
+    const fields = this.defs.map(f => ({ ...f, value: v[f.id] || '', set: e => { const val = e.target.value; this.setState(s => ({ v: { ...s.v, [f.id]: val } })); } }));
+    const ok = !!(v.name && v.email && v.email.includes('@'));
+    const contactVals = {
+      showForm: !done, done, fields,
+      venueTypes: this.chips('venue', ['Restaurant', 'Café / bakery', 'Bar / lounge', 'Hotel F&B', 'Catering', 'Group']),
+      outletOpts: this.chips('outlets', ['1', '2–3', '4–10', '10+']),
+      methodOpts: this.chips('method', ['Email', 'WhatsApp', 'Call']),
+      note: this.state.error || (this.state.sending ? 'Sending…' : ok ? 'We reply within two working days.' : 'Name and email are required.'),
+      disabled: !ok || !!this.state.sending, opacity: ok && !this.state.sending ? 1 : 0.4,
+      submit: async () => {
+        if (!ok || this.state.sending) return;
+        this.setState({ sending: true, error: '' });
+        const payload = { ...v, _subject: 'Re. website — contact from ' + v.name, source: 'Re. landing page — contact' };
+        try {
+          const r = await fetch('https://formspree.io/f/xppwayoj', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
+          if (!r.ok) throw new Error('bad status');
+          this.setState({ done: true, sending: false });
+        } catch (_) {
+          this.setState({ sending: false, error: 'Could not send — email us instead at Charbel@re-agency.me.' });
+        }
+      },
+    };
+    const all = [
+      { title: 'Concept development', body: 'Positioning, format, menu architecture and the guest journey for a new venue or a tired one.' },
+      { title: 'Menu engineering & recipe costing', body: 'Every dish costed to the gram, priced from the cheque backwards, and engineered for what actually sells.' },
+      { title: 'Kitchen & operations audit', body: 'Workflow, standards, procurement and rosters reviewed on site — with a fix list ranked by impact.' },
+      { title: 'Pre-opening & launch', body: 'Critical path, hiring, training and soft-launch cadence so opening week is a rehearsal, not a rescue.' },
+      { title: 'Turnaround & performance review', body: 'For venues that used to work. A ten-week diagnostic-to-implementation programme with weekly numbers.' },
+      { title: 'Financial modelling & reforecast', body: 'P&L, covers and spend-per-head models, break-even and ROI — built to the operator\'s week, not the accountant\'s year.' },
+      { title: 'Team training', body: 'Floor and kitchen coaching that survives the consultant leaving.' },
+      { title: 'Sustainability & waste', body: 'Waste mapping, sourcing and energy reviewed as cost lines first, story second.' },
+    ];
+    const count = Math.max(3, Math.min(8, this.props.serviceCount ?? 6));
+    const services = all.slice(0, count).map((s, i) => ({ ...s, num: String(i + 1).padStart(2, '0') }));
+    const go = {};
+    for (const id of ['top', 'pillars', 'services', 'process', 'standards', 'about', 'insights', 'contact', 'intake']) {
+      go[id] = (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        if (id === 'contact' || id === 'intake') {
+          this.setState({ page: id }, () => window.scrollTo({ top: 0 }));
+          try { history.replaceState(null, '', '#' + id); } catch (_) {}
+          return;
+        }
+        if (this.state.page !== 'home') {
+          this.setState({ page: 'home' }, () => { const el = document.getElementById(id); if (!el) { window.scrollTo({ top: 0 }); return; } const header = document.querySelector('header'); const offset = header ? header.getBoundingClientRect().height : 0; window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - offset) }); });
+          try { history.replaceState(null, '', '#' + id); } catch (_) {}
+          return;
+        }
+        const el = document.getElementById(id);
+        if (!el) return;
+        const header = document.querySelector('header');
+        const offset = header ? header.getBoundingClientRect().height : 0;
+        const y = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+        try { history.replaceState(null, '', '#' + id); } catch (_) {}
+      };
+    }
+    const page = this.state.page;
+    return { services, go, isHome: page === 'home', isContact: page === 'contact', isIntake: page === 'intake', ...contactVals };
+  }
+}
+</script>
+</body>
+</html>
