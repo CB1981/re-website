@@ -95,6 +95,14 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 .wordmark--footer { font-size: 24px; }
 
+/* The mark set inline in running display type — inherits the heading's
+   face, weight and size, so the dot scales with it. */
+.mark {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
 /* --------------------------------------------------------------- header */
 
 .site-header {

@@ -238,6 +238,27 @@
 
   function fmt(v) { return Array.isArray(v) ? v.join(', ') : (v || '—'); }
 
+  // The mark's full stop is a drawn circle, not typography — so a heading
+  // that mentions "Re." renders the wordmark rather than typed text. Titles
+  // stay plain strings, since they double as Formspree payload keys.
+  function withMark(text) {
+    var frag = document.createDocumentFragment();
+    text.split('Re.').forEach(function (part, i) {
+      if (i > 0) {
+        var mark = document.createElement('span');
+        mark.className = 'mark';
+        mark.appendChild(document.createTextNode('Re'));
+        var dot = document.createElement('span');
+        dot.className = 'wordmark__dot';
+        dot.setAttribute('aria-hidden', 'true');
+        mark.appendChild(dot);
+        frag.appendChild(mark);
+      }
+      if (part) frag.appendChild(document.createTextNode(part));
+    });
+    return frag;
+  }
+
   function el(tag, cls, text) {
     var n = document.createElement(tag);
     if (cls) n.className = cls;
@@ -295,7 +316,9 @@
 
     /* question */
     var step = el('div', 'step');
-    step.appendChild(el('h2', 'step__title', q.title));
+    var stepTitle = el('h2', 'step__title');
+    stepTitle.appendChild(withMark(q.title));
+    step.appendChild(stepTitle);
     if (q.hint) step.appendChild(el('p', 'step__hint', q.hint));
 
     if (q.kind === 'path') {
