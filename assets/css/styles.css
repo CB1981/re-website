@@ -740,6 +740,14 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   gap: 34px;
 }
 
+.site-footer__lead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .site-footer__title {
   font-family: var(--display);
   font-weight: 900;
@@ -799,8 +807,6 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 .foot-social svg { width: 17px; height: 17px; }
 
 .foot-btn {
-  align-self: center;
-  margin: 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
