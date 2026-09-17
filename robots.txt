@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://re-agency.me/sitemap.xml
+Sitemap: https://re-consultancy.me/sitemap.xml

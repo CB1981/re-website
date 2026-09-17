@@ -3,7 +3,7 @@
 The Re. landing page: a single-page site for the hospitality advisory, built as plain
 HTML, CSS and JavaScript. No build step, no framework, no dependencies.
 
-**Live at:** https://re-agency.me
+**Live at:** https://re-consultancy.me
 
 ---
 
@@ -46,7 +46,7 @@ Type is Poppins (900 for display, 600 for subheads) and Inter for everything els
 ## Forms
 
 Both forms POST JSON to [Formspree](https://formspree.io); submissions arrive by
-email at Hello@re-agency.me and in the Formspree dashboard.
+email at Hello@re-consultancy.me and in the Formspree dashboard.
 
 | Form | Endpoint |
 | --- | --- |
@@ -89,7 +89,7 @@ site and publishes it to GitHub Pages. Nothing to build and nothing to install.
 
 **First-time setup:** in **Settings → Pages**, set *Source* to **GitHub Actions**.
 
-**DNS for re-agency.me** — at your domain registrar, create:
+**DNS for re-consultancy.me** — at your domain registrar, create:
 
 | Type | Name | Value |
 | --- | --- | --- |
