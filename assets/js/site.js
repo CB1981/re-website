@@ -12,7 +12,7 @@
     contact: 'https://formspree.io/f/xppwayoj',
     intake: 'https://formspree.io/f/xppwayoj'
   };
-  var FALLBACK = 'Could not send. Email us instead at Hello@re-agency.me.';
+  var FALLBACK = 'Could not send. Email us instead at Hello@re-consultancy.me.';
 
   /* ------------------------------------------------------------ routing */
 
