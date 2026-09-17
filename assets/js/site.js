@@ -16,79 +16,39 @@
 
   /* ------------------------------------------------------------ routing */
 
-  var pages = {};
-  document.querySelectorAll('[data-page]').forEach(function (el) {
-    pages[el.getAttribute('data-page')] = el;
-  });
+  /* Contact, the intake and the article are real pages now. All that is left
+     here is smooth in-page scrolling for the home page's own sections, with
+     the sticky header's height taken off the target. */
 
-  // Views that replace the home page rather than scrolling to a section.
-  var PAGES = ['contact', 'intake', 'article'];
-
-  var current = 'home';
-
-  function showPage(name) {
-    current = pages[name] ? name : 'home';
-    Object.keys(pages).forEach(function (key) {
-      pages[key].hidden = key !== current;
-    });
-  }
-
-  function scrollToSection(id) {
+  function scrollToSection(id, smooth) {
     var el = document.getElementById(id);
-    if (!el) { window.scrollTo({ top: 0 }); return; }
+    if (!el) return false;
     var header = document.querySelector('.site-header');
     var offset = header ? header.getBoundingClientRect().height : 0;
-    var y = el.getBoundingClientRect().top + window.scrollY - offset;
-    return Math.max(0, y);
-  }
-
-  function go(id, smooth) {
-    if (PAGES.indexOf(id) > -1) {
-      showPage(id);
-      window.scrollTo({ top: 0 });
-      setHash(id);
-      return;
-    }
-    if (current !== 'home') {
-      showPage('home');
-      window.scrollTo({ top: scrollToSection(id) || 0 });
-      setHash(id);
-      return;
-    }
-    var y = scrollToSection(id);
-    if (y === undefined) return;
+    var y = Math.max(0, el.getBoundingClientRect().top + window.scrollY - offset);
     window.scrollTo({ top: y, behavior: smooth === false ? 'auto' : 'smooth' });
-    setHash(id);
-  }
-
-  function setHash(id) {
-    try { history.replaceState(null, '', '#' + id); } catch (e) { /* ignore */ }
+    return true;
   }
 
   document.addEventListener('click', function (e) {
-    var link = e.target.closest('[data-go]');
+    var link = e.target.closest('a[href^="#"], a[href^="/#"]');
     if (!link) return;
-    e.preventDefault();
-    go(link.getAttribute('data-go'));
+    var id = link.getAttribute('href').replace(/^\/?#/, '');
+    if (!id) return;
+    // A /#section link from a sub-page is a real navigation; let it happen.
+    if (link.getAttribute('href').charAt(0) === '/' && location.pathname !== '/') return;
+    if (scrollToSection(id)) {
+      e.preventDefault();
+      try { history.replaceState(null, '', '#' + id); } catch (err) { /* ignore */ }
+    }
   });
 
+  // Arriving on /#services, the browser jumps before the sticky header is
+  // measured, leaving the section tucked underneath it.
   var initial = (location.hash || '').replace('#', '');
-  if (PAGES.indexOf(initial) > -1) {
-    showPage(initial);
-    // These views carry the hash as an element id, so the browser's own
-    // fragment jump scrolls them under the sticky header. Undo it.
-    window.scrollTo({ top: 0 });
-    window.addEventListener('load', function () { window.scrollTo({ top: 0 }); });
-  } else if (initial) {
-    // Sections live on the home page; jump there once layout has settled.
-    window.addEventListener('load', function () { go(initial, false); });
+  if (initial) {
+    window.addEventListener('load', function () { scrollToSection(initial, false); });
   }
-
-  window.addEventListener('hashchange', function () {
-    var h = (location.hash || '').replace('#', '');
-    if (PAGES.indexOf(h) > -1) { showPage(h); window.scrollTo({ top: 0 }); }
-    else if (h) { go(h, false); }
-  });
 
   /* ------------------------------------------------------- chip helpers */
 
