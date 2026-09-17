@@ -19,6 +19,7 @@
 
   --sans: Inter, Arial, sans-serif;
   --display: Poppins, Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --shell: 1240px;
   --gutter: 32px;
@@ -132,9 +133,9 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 .site-nav a,
 .site-nav__cta {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -152,9 +153,40 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 /* --------------------------------------------------------------- kicker */
 
+/* The label system: every small uppercase mark is set in mono, which is
+   what gives the page its precision. Headings and body stay as they are. */
+.kicker,
+.pillar__label,
+.phase__meta,
+.service__num,
+.stat__label,
+.about__role,
+.insights__byline,
+.article__byline,
+.hero__badge-kicker,
+.article__cta-kicker,
+.foot-col__head,
+.foot-bar__tag,
+.foot-bar__legal,
+.site-nav a,
+.site-nav__cta,
+.btn-solid,
+.btn-underline,
+.btn-back,
+.foot-btn,
+.field,
+.chip-group__label,
+.progress__meta,
+.review__label,
+.review__edit,
+.step-nav__back,
+.stat__figure-suffix {
+  font-family: var(--mono);
+}
+
 .kicker {
   font-size: 12px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--sage);
 }
@@ -332,7 +364,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 .hero__badge-kicker {
   font-size: 10px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
   text-transform: uppercase;
   color: var(--stone);
 }
@@ -342,6 +375,32 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   font-weight: 600;
   font-size: 17px;
   line-height: 1.3;
+}
+
+/* ----------------------------------------------------------------- stats */
+
+.stats {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.stats__inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 32px 24px;
+}
+
+.stats .stat__figure { font-size: clamp(38px, 4.4vw, 54px); }
+
+/* The one gold element here. The brand doc's data style: a large gold key
+   figure with a quiet supporting label. */
+.stat__figure-suffix {
+  color: var(--gold);
+  font-weight: 500;
+  font-size: 0.62em;
+  letter-spacing: 0;
 }
 
 /* -------------------------------------------------------------- pillars */
@@ -389,8 +448,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 }
 
 .pillar__label {
-  font-size: 15px;
-  letter-spacing: 0.3em;
+  font-size: 13px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--stone);
 }
@@ -411,74 +470,81 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 /* ------------------------------------------------------------- services */
 
-.services {
+.services__inner {
   padding-top: 112px;
   padding-bottom: 112px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 64px;
+}
+
+.services__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 .services__intro {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  align-self: start;
-  position: sticky;
-  top: 120px;
+  gap: 20px;
+  max-width: 620px;
 }
 
 .services__lede {
   font-size: 17px;
   line-height: 1.6;
   color: var(--sage);
-  max-width: 420px;
+  max-width: 52ch;
   text-wrap: pretty;
 }
 
-.services__intro .btn-underline {
-  align-self: flex-start;
-  margin-top: 8px;
-  padding: 14px 4px;
+/* Hairline grid: a 1px gap over a rule-coloured ground draws the dividers,
+   the same technique the pillars use. */
+/* Fixed columns, not auto-fit: six cards have to divide exactly, or the
+   spare cells show through as bare rule colour. */
+.services__grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
 }
 
-.services__list {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--rule);
+@media (min-width: 620px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 950px) {
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .service {
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  gap: 20px;
-  padding: 30px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.service__num {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--gold);
-  padding-top: 6px;
-}
-
-.service__body {
+  background: var(--ivory);
+  padding: 30px 28px 34px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
+  transition: background 0.15s ease;
+}
+
+.service:hover { background: var(--band); }
+
+.service__num {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
 }
 
 .service__title {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.25;
 }
 
 .service__text {
-  font-size: 15.5px;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--sage);
   text-wrap: pretty;
@@ -527,7 +593,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   display: flex;
   justify-content: space-between;
   font-size: 11px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--sage);
 }
@@ -690,45 +756,69 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 .insights__inner {
   padding-top: 96px;
   padding-bottom: 96px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 56px;
-  align-items: center;
-}
-
-.insights__copy {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 28px;
 }
 
-.insights__copy h2 {
-  font-size: clamp(30px, 3.6vw, 46px);
+/* The whole piece is the link, not just the cue at the bottom. */
+.insight-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border: 1px solid var(--rule-dark);
+  overflow: hidden;
+  color: var(--ivory);
+}
+
+.insight-card:hover { color: var(--ivory); }
+.insight-card .photo { background: var(--forest); }
+
+.insight-card img { transition: transform 0.5s ease; }
+.insight-card:hover img { transform: scale(1.03); }
+
+.insight-card__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 44px 40px;
+}
+
+.insight-card__copy .h2 {
+  font-size: clamp(28px, 3vw, 40px);
   line-height: 1.1;
   text-wrap: balance;
 }
 
 .insights__lede {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--stone);
-  max-width: 520px;
+  max-width: 52ch;
   text-wrap: pretty;
 }
 
-.insights__meta {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .insights__byline {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--stone);
 }
+
+.insight-card__cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: var(--mono);
+  transition: color 0.15s ease;
+}
+
+.insight-card:hover .insight-card__cue { color: var(--gold); }
+.insight-card__arrow { color: var(--gold); }
 
 /* --------------------------------------------------------------- footer */
 
@@ -779,7 +869,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 .foot-col__head {
   font-size: 11px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--stone);
   font-weight: 500;
@@ -1093,7 +1183,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 
 .article__cta-kicker {
   font-size: 11px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--stone);
 }
@@ -1172,8 +1262,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: 12px;
-  letter-spacing: 0.3em;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--sage);
 }
