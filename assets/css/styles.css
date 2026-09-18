@@ -204,9 +204,9 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 .h1-hero {
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(44px, 6vw, 84px);
-  line-height: 1;
-  letter-spacing: -0.03em;
+  font-size: clamp(34px, 4.3vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -338,6 +338,13 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   color: var(--sage);
   max-width: 520px;
   text-wrap: pretty;
+}
+
+/* Emphasis inside a lede: darker, not heavier. Sage to Forest reads as
+   weight on this ground without shouting over the headline. */
+.lede__em {
+  font-weight: 600;
+  color: var(--forest);
 }
 
 .hero__actions {
