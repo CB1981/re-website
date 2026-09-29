@@ -85,19 +85,23 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   color: var(--forest);
 }
 
-.wordmark__dot {
+/* Proportions taken off the supplied artwork, expressed against the cap
+   height so the dash scales with the letters: it sits level with the bar
+   of the e, not on the baseline. */
+.wordmark__dash {
+  position: relative;
+  bottom: 0.223em;
   display: inline-block;
-  width: 0.28em;
-  height: 0.28em;
-  border-radius: 50%;
+  width: 0.31em;
+  height: 0.12em;
   background: var(--gold);
-  margin-left: 0.08em;
+  margin-left: 0.06em;
 }
 
 .wordmark--footer { font-size: 24px; }
 
 /* The mark set inline in running display type — inherits the heading's
-   face, weight and size, so the dot scales with it. */
+   face, weight and size, so the dash scales with it. */
 .mark {
   display: inline-flex;
   align-items: baseline;
@@ -464,9 +468,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 }
 
 .pillar__dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
+  width: 18px;
+  height: 7px;
   background: var(--gold);
 }
 
@@ -687,11 +690,10 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 }
 
 .standard__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 13px;
+  height: 5px;
   background: var(--gold);
-  margin-top: 8px;
+  margin-top: 11px;
 }
 
 .standard__body {
@@ -946,9 +948,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 .foot-btn:hover { color: var(--forest); transform: translateY(-2px); }
 
 .foot-btn__dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
+  width: 13px;
+  height: 5px;
   background: var(--gold);
 }
 
@@ -1107,9 +1108,8 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
 }
 
 .thanks__dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  width: 20px;
+  height: 8px;
   background: var(--gold);
 }
 

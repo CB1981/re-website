@@ -198,9 +198,9 @@
 
   function fmt(v) { return Array.isArray(v) ? v.join(', ') : (v || 'Not answered'); }
 
-  // The mark's full stop is a drawn circle, not typography, so a heading
-  // that mentions "Re." renders the wordmark rather than typed text. Titles
-  // stay plain strings, since they double as Formspree payload keys.
+  // The mark's dash is drawn, not typography, so a heading that mentions
+  // "Re." renders the wordmark rather than typed text. Titles stay plain
+  // strings, since they double as Formspree payload keys.
   function withMark(text) {
     var frag = document.createDocumentFragment();
     text.split('Re.').forEach(function (part, i) {
@@ -208,10 +208,10 @@
         var mark = document.createElement('span');
         mark.className = 'mark';
         mark.appendChild(document.createTextNode('Re'));
-        var dot = document.createElement('span');
-        dot.className = 'wordmark__dot';
-        dot.setAttribute('aria-hidden', 'true');
-        mark.appendChild(dot);
+        var dash = document.createElement('span');
+        dash.className = 'wordmark__dash';
+        dash.setAttribute('aria-hidden', 'true');
+        mark.appendChild(dash);
         frag.appendChild(mark);
       }
       if (part) frag.appendChild(document.createTextNode(part));
