@@ -11,6 +11,7 @@ HTML, CSS and JavaScript. No build step, no framework, no dependencies.
 
 ```
 index.html            The whole site — home, contact page, intake page
+planner/              Re. Planner page (planner.css, builds on academy.css)
 academy/              Re- Academy page (academy.css) and the free sample training (academy/sample/)
 404.html              Branded not-found page
 assets/css/           styles.css (the design system), fonts.css (@font-face)
