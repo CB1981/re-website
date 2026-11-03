@@ -49,7 +49,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;margin
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .tag{display:inline-block;padding:3px 11px;border-radius:999px;font-size:13px;font-weight:500;background:var(--shade);color:var(--ink-2)}
 .card{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:28px}
-.shot{background:var(--shade);border:1px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:13px;padding:16px;min-height:220px}
 .band{background:var(--ivory);border-top:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft)}
 
 /* wordmark: Re + gold dash */
@@ -92,12 +91,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;margin
 
 /* journey */
 .journey h2{font-size:40px;line-height:46px;margin-bottom:40px}
-.steps{display:flex;flex-direction:column;gap:28px}
+.steps{display:flex;flex-direction:column;gap:48px}
 .step{display:flex;flex-wrap:wrap;gap:32px;align-items:center}
-.step__copy{flex:1 1 420px;min-width:0}
+.step__copy{flex:1 1 420px;min-width:0;max-width:680px}
 .step__copy h3{font-size:24px;margin:8px 0}
 .step__copy p{margin:0;color:var(--ink-2)}
-.step .shot{flex:1 1 420px}
 .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 
 /* faq */
@@ -218,24 +216,19 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;margin
       <div class="steps">
         <div class="step">
           <div class="step__copy"><p class="eyebrow gold" style="margin:0">01 · Business plan</p><h3>Start from the venue you have in mind.</h3><p>Concept, seats and opening month; sales by meal period, day and season; costs, team and rent; investment, ROI, payback and shareholders. Export to PDF, Excel or Word, or fill the client input workbook.</p></div>
-          <div class="shot">[Screenshot: Business plan · investment and payback]</div>
         </div>
         <div class="step">
           <div class="step__copy"><p class="eyebrow gold" style="margin:0">02 · Forecast · 03 · Budget</p><h3>When you open, the plan becomes the budget.</h3><p>Nothing is entered twice. Import your own budget workbook, or build it with us, and update the forecast as the year moves.</p></div>
-          <div class="shot">[Screenshot: Plan the year · budget and forecast]</div>
         </div>
         <div class="step">
           <div class="step__copy"><p class="eyebrow gold" style="margin:0">04 · Weekly P&amp;L</p><h3>Each venue enters its own week.</h3><p>Sales, covers, costs and manning, once a week. Weeks roll up into the month, against budget, forecast and last year.</p></div>
-          <div class="shot">[Screenshot: Enter results · week 41]</div>
         </div>
         <div class="step">
           <div class="step__copy"><p class="eyebrow gold" style="margin:0">05 · Business health</p><h3>One score out of 100, six pillars.</h3><p>Graded A Excellent, B Healthy, C Watch, D At risk, against targets you set per venue.</p>
             <div class="pillars"><span class="tag">Profitability &amp; cost 30%</span><span class="tag">Commercial 25%</span><span class="tag">Guest 15%</span><span class="tag">Operations 12.5%</span><span class="tag">Menu 10%</span><span class="tag">People 7.5%</span></div></div>
-          <div class="shot">[Screenshot: Review · health report]</div>
         </div>
         <div class="step">
           <div class="step__copy"><p class="eyebrow gold" style="margin:0">06 · Action plan</p><h3>What to fix next, and who owns it.</h3><p>Actions from a library of proven fixes, ranked by the health points each wins back, each with an owner such as the GM or Executive Chef.</p></div>
-          <div class="shot">[Screenshot: Act · action plan]</div>
         </div>
       </div>
     </div>
