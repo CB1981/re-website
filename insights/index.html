@@ -46,23 +46,14 @@
     <p class="page-head__lede">Notes on hospitality performance, operations, safety and sustainability. Written from the floor, not the deck.</p>
   </section>
 
-  <section class="shell index-filter" aria-label="Filter by theme">
-    <div class="chip-row" role="group" aria-label="Themes">
-      <button type="button" class="chip" data-theme="all" aria-pressed="true">All</button>
-      <button type="button" class="chip" data-theme="performance" aria-pressed="false">F&amp;B performance</button>
-      <button type="button" class="chip" data-theme="operations" aria-pressed="false">Operations</button>
-      <button type="button" class="chip" data-theme="safety" aria-pressed="false">Safety &amp; compliance</button>
-      <button type="button" class="chip" data-theme="sustainability" aria-pressed="false">Sustainability</button>
-    </div>
-  </section>
 
-  <section class="shell index-featured" data-theme="performance">
+  <section class="shell index-featured">
     <a class="feature" href="/insights/why-most-menus-are-priced-from-the-wrong-end/">
       <div class="photo photo--insight feature__media">
         <img src="/assets/img/insight-cheque.webp" width="994" height="780" alt="A restaurant cheque broken down into cost lines, showing a negative net result" loading="lazy">
       </div>
       <div class="feature__copy">
-        <p class="kicker">Featured · F&amp;B performance</p>
+        <p class="kicker">F&amp;B performance</p>
         <h2 class="h2">Why most menus are priced from the wrong end.</h2>
         <p class="feature__lede">Cost-plus pricing protects margin on paper and loses it on the floor. A note on building the menu from the guest's cheque backwards.</p>
         <p class="insights__byline">Charbel Basbous · 6 min · September 2026</p>
@@ -71,55 +62,6 @@
     </a>
   </section>
 
-  <section class="shell index-grid-wrap">
-    <div class="post-grid">
-
-      <article class="post post--soon" data-theme="performance">
-        <p class="post__theme">F&amp;B performance</p>
-        <h3 class="post__title">Your food cost is on target. So why isn't the restaurant profitable?</h3>
-        <p class="post__text">Food cost is a ratio, not a result. What the ratio hides, and the four lines to read alongside it.</p>
-        <p class="post__meta">In preparation</p>
-      </article>
-
-      <article class="post post--soon" data-theme="sustainability">
-        <p class="post__theme">Sustainability</p>
-        <h3 class="post__title">Food waste isn't only a sustainability problem. It's a P&amp;L problem.</h3>
-        <p class="post__text">Mapping waste from purchase to plate, and costing each stage the way you would cost a dish.</p>
-        <p class="post__meta">In preparation</p>
-      </article>
-
-      <article class="post post--soon" data-theme="safety">
-        <p class="post__theme">Safety &amp; compliance</p>
-        <h3 class="post__title">The audit passed. The operation still isn't safe.</h3>
-        <p class="post__text">Why a score on a day tells you less than a system on a Tuesday, and what to measure instead.</p>
-        <p class="post__meta">In preparation</p>
-      </article>
-
-      <article class="post post--soon" data-theme="operations">
-        <p class="post__theme">Operations</p>
-        <h3 class="post__title">Why SOPs fail once the consultant leaves.</h3>
-        <p class="post__text">Procedures that survive contact with a Friday service, and the handover that makes them stick.</p>
-        <p class="post__meta">In preparation</p>
-      </article>
-
-      <article class="post post--soon" data-theme="operations">
-        <p class="post__theme">Operations</p>
-        <h3 class="post__title">Pre-opening readiness: what should actually be tested before opening day.</h3>
-        <p class="post__text">The rehearsal list, in order, and the three things most openings discover a week too late.</p>
-        <p class="post__meta">In preparation</p>
-      </article>
-
-      <article class="post post--soon" data-theme="sustainability">
-        <p class="post__theme">Sustainability</p>
-        <h3 class="post__title">Recycling rate against waste diversion: hospitality needs to stop confusing the two.</h3>
-        <p class="post__text">Two numbers that sound alike, measure different things, and lead to different decisions.</p>
-        <p class="post__meta">In preparation</p>
-      </article>
-
-    </div>
-
-    <p class="index-empty" hidden>Nothing under this theme yet.</p>
-  </section>
 
   <section class="band-forest">
     <div class="shell page-cta__inner" style="padding:64px 0">
@@ -181,34 +123,6 @@
   </div>
 </footer>
 
-<script>
-// Theme filter. Everything is already in the page, so filtering is a class
-// away and needs no request; with the script off, all pieces show.
-(function () {
-  var row = document.querySelector('.index-filter .chip-row');
-  if (!row) return;
-  var items = document.querySelectorAll('[data-theme]:not(.chip)');
-  var empty = document.querySelector('.index-empty');
-
-  row.addEventListener('click', function (e) {
-    var chip = e.target.closest('.chip');
-    if (!chip) return;
-    var want = chip.getAttribute('data-theme');
-
-    row.querySelectorAll('.chip').forEach(function (c) {
-      c.setAttribute('aria-pressed', String(c === chip));
-    });
-
-    var shown = 0;
-    items.forEach(function (item) {
-      var match = want === 'all' || item.getAttribute('data-theme') === want;
-      item.hidden = !match;
-      if (match) shown++;
-    });
-    empty.hidden = shown > 0;
-  });
-})();
-</script>
 <script src="/assets/js/site.js?v=dev" defer></script>
 </body>
 </html>
