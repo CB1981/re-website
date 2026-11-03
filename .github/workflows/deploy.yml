@@ -27,7 +27,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp -r index.html 404.html assets contact intake insights academy planner robots.txt sitemap.xml _site/
+          cp -r index.html 404.html assets about consultancy contact intake insights academy planner robots.txt sitemap.xml _site/
           touch _site/.nojekyll
 
           # Stamp the stylesheet and script URLs with this commit, so a new

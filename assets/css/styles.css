@@ -1594,3 +1594,67 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   html { scroll-behavior: auto; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* ------------------------------------------------------------ sub-pages */
+
+/* The head of a page that is not the home page: the same three parts as the
+   hero, without the photograph beside them. */
+.page-head {
+  padding-top: 88px;
+  padding-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.page-head__lede {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--sage);
+  max-width: 620px;
+  text-wrap: pretty;
+}
+
+/* The row that closes a sub-page. */
+.page-cta { padding-top: 72px; padding-bottom: 96px; }
+
+.page-cta__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+@media (min-width: 950px) {
+  .page-cta__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-head { padding-top: 48px; padding-bottom: 32px; }
+  .page-cta { padding-top: 48px; padding-bottom: 64px; }
+}
+
+/* A service card that is itself a link, used on the home page for the three
+   ways in. Same cell as the others; it just answers to a click. */
+.service--link { transition: background 0.15s ease; }
+.service--link:hover { background: var(--band); color: var(--forest); }
+
+.service__cue {
+  margin-top: auto;
+  padding-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.service--link:hover .service__cue { color: var(--gold); }
