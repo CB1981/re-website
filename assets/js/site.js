@@ -23,7 +23,7 @@
   function scrollToSection(id, smooth) {
     var el = document.getElementById(id);
     if (!el) return false;
-    var header = document.querySelector('.site-header');
+    var header = document.querySelector('.re-header');
     var offset = header ? header.getBoundingClientRect().height : 0;
     var y = Math.max(0, el.getBoundingClientRect().top + window.scrollY - offset);
     window.scrollTo({ top: y, behavior: smooth === false ? 'auto' : 'smooth' });

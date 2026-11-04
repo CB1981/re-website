@@ -1,0 +1,69 @@
+/* Re. shared header and footer, on every page.
+   Loaded after styles.css or product.css. Everything is namespaced .re-* with
+   its own colours, so neither page stylesheet can change it. */
+
+:root{
+  --re-forest:#1B2E27; --re-forest-deep:#16261F; --re-forest-line:#2F4339;
+  --re-ivory:#F6F2EA; --re-paper:#FBF9F4; --re-gold:#D4AF37; --re-stone:#C8C0B0;
+  --re-ink-2:#3E5248; --re-muted:#57695E; --re-faint:#8FA899; --re-rule:#DDD6C8; --re-border:#8C877A;
+}
+/* Follows the page width on the consultancy pages, 1200px on the product pages */
+.re-wrap{max-width:var(--shell,1200px);margin:0 auto;padding:0 var(--gutter,24px)}
+
+.re-wordmark{display:inline-flex;align-items:baseline;font-family:Poppins,Arial,sans-serif;font-weight:900;font-size:30px;line-height:1;letter-spacing:-.03em;color:var(--re-forest);text-decoration:none;transition:font-size .2s ease}
+.re-wordmark:hover{color:var(--re-forest)}
+.re-wordmark__dash{position:relative;bottom:.223em;display:inline-block;width:.31em;height:.12em;background:var(--re-gold);margin-left:.06em}
+
+/* Header: stays pinned, slims down on scroll */
+.re-header{position:sticky;top:0;z-index:40;background:var(--re-paper);border-bottom:1px solid var(--re-rule);font-family:Inter,Arial,sans-serif}
+.re-header__inner{display:flex;align-items:center;gap:30px;padding-top:20px;padding-bottom:20px;transition:padding .2s ease}
+.re-header.is-compact .re-header__inner{padding-top:10px;padding-bottom:10px}
+.re-header.is-compact .re-wordmark{font-size:24px}
+.re-nav{display:flex;gap:30px;flex-grow:1;font-size:15px;font-weight:500}
+.re-nav a{color:var(--re-ink-2);text-decoration:none;padding-bottom:2px;border-bottom:2px solid transparent}
+.re-nav a:hover{color:var(--re-forest)}
+.re-nav a[aria-current="page"]{color:var(--re-forest);border-bottom-color:var(--re-gold)}
+.re-actions{display:flex;align-items:center;gap:16px;margin-left:auto}
+.re-login{font-size:13px;color:var(--re-muted);text-decoration:none;white-space:nowrap}
+.re-login:hover{color:var(--re-forest)}
+.re-btn,.re-btn2{display:inline-block;padding:13px 20px;border-radius:8px;font-family:Inter,Arial,sans-serif;font-size:15px;font-weight:600;line-height:1.4;text-decoration:none;white-space:nowrap}
+.re-btn{background:var(--re-forest);color:var(--re-ivory)}
+.re-btn:hover{background:#24392F;color:var(--re-ivory)}
+.re-btn2{padding:12px 20px;border:1px solid var(--re-border);color:var(--re-forest)}
+.re-btn2:hover{background:#fff;color:var(--re-forest)}
+.re-menu-btn{display:none;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:44px;height:44px;padding:0;border:1px solid var(--re-border);border-radius:8px;background:#fff;cursor:pointer}
+.re-menu-btn span{width:18px;height:2px;background:var(--re-forest)}
+.re-mobile-menu{display:none}
+.re-header a:focus-visible,.re-menu-btn:focus-visible,.re-footer a:focus-visible{outline:2px solid var(--re-gold);outline-offset:2px}
+
+@media (max-width:920px){
+  .re-nav,.re-login,.re-actions .re-btn{display:none}
+  .re-menu-btn{display:flex}
+  .re-header__inner{padding-top:14px;padding-bottom:14px}
+  .re-mobile-menu.is-open{display:flex;flex-direction:column;gap:12px;max-height:calc(100vh - 80px);overflow-y:auto;padding:8px 24px 20px;border-top:1px solid var(--re-rule)}
+  .re-mobile-menu .re-item{padding:14px 0;border-bottom:1px solid var(--re-rule);font-family:Poppins,Arial,sans-serif;font-size:22px;font-weight:600;color:var(--re-forest);text-decoration:none}
+  .re-mobile-menu .re-item[aria-current="page"]{color:var(--re-ink-2)}
+  .re-mobile-menu .re-btn,.re-mobile-menu .re-btn2,.re-mobile-menu .re-login{display:block;text-align:center}
+}
+
+/* Footer */
+.re-footer{background:var(--re-forest-deep);color:var(--re-stone);font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.6}
+.re-footer__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;padding-top:56px;padding-bottom:40px}
+.re-footer .re-wordmark{color:var(--re-ivory);font-size:28px}
+.re-footer__brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.re-footer__tag{color:var(--re-ivory)}
+.re-footer__address{margin:0;font-style:normal}
+.re-footer__social{display:flex;gap:10px}
+.re-footer__social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--re-forest-line);border-radius:50%;color:var(--re-stone)}
+.re-footer__social a:hover{border-color:var(--re-gold);color:var(--re-gold)}
+.re-footer__social svg{width:17px;height:17px}
+.re-footer__col{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.re-footer__col a{color:var(--re-stone);text-decoration:none}
+.re-footer__col a:hover{color:var(--re-ivory)}
+.re-footer__head{margin:0 0 8px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--re-gold)}
+.re-footer__bar{display:flex;flex-wrap:wrap;gap:20px;padding-top:16px;padding-bottom:24px;font-size:12.5px;color:var(--re-faint)}
+.re-footer__rule{border-top:1px solid var(--re-forest-line)}
+
+@media (max-width:920px){.re-footer__grid{grid-template-columns:1fr 1fr 1fr}.re-footer__brand{grid-column:1/-1}}
+@media (max-width:560px){.re-footer__grid{grid-template-columns:1fr 1fr}.re-footer__col:last-child{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){.re-header__inner,.re-wordmark{transition:none}}

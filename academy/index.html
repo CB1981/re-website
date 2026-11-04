@@ -23,34 +23,35 @@
 <link rel="preload" href="/assets/fonts/jetbrainsmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/fonts.css?v=dev">
 <link rel="stylesheet" href="/assets/css/product.css?v=dev">
+<link rel="stylesheet" href="/assets/css/chrome.css?v=dev">
 </head>
 <body>
 
-<header class="site-header" id="top">
-  <div class="wrap site-header__inner">
-    <a class="wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></a>
-    <nav class="nav" aria-label="Primary">
+<header class="re-header" id="top">
+  <div class="re-wrap re-header__inner">
+    <a class="re-wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="re-wordmark__dash" aria-hidden="true"></span></a>
+    <nav class="re-nav" aria-label="Primary">
       <a href="/consultancy/">Consultancy</a>
       <a href="/planner/">Planner</a>
       <a href="/academy/" aria-current="page">Academy</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <div class="header-actions">
-      <a class="login" href="https://app.re-consultancy.me">Client login →</a>
-      <a class="btn" href="/contact/?topic=demo">Request a demo</a>
-      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    <div class="re-actions">
+      <a class="re-login" href="https://app.re-consultancy.me">Client login →</a>
+      <a class="re-btn" href="/contact/?topic=demo">Request a demo</a>
+      <button class="re-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="re-mobile-menu"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
-    <a class="item" href="/consultancy/">Consultancy</a>
-    <a class="item" href="/planner/">Planner</a>
-    <a class="item" href="/academy/" aria-current="page">Academy</a>
-    <a class="item" href="/about/">About</a>
-    <a class="item" href="/contact/">Contact</a>
-    <a class="btn" href="/contact/?topic=demo">Request a demo</a>
-    <a class="btn2" href="/academy/sample/">Watch a training</a>
-    <a class="login" href="https://app.re-consultancy.me">Client login</a>
+  <nav class="re-mobile-menu" id="re-mobile-menu" aria-label="Mobile">
+    <a class="re-item" href="/consultancy/">Consultancy</a>
+    <a class="re-item" href="/planner/">Planner</a>
+    <a class="re-item" href="/academy/" aria-current="page">Academy</a>
+    <a class="re-item" href="/about/">About</a>
+    <a class="re-item" href="/contact/">Contact</a>
+    <a class="re-btn" href="/contact/?topic=demo">Request a demo</a>
+    <a class="re-btn2" href="/contact/?topic=consultation">Book a consultation</a>
+    <a class="re-login" href="https://app.re-consultancy.me">Client login</a>
   </nav>
 </header>
 
@@ -191,30 +192,50 @@
   </section>
 </main>
 
-<footer class="footer">
-  <div class="wrap footer__grid">
-    <div><a class="wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></a><div style="color:var(--ivory);margin-top:12px">Rethink. Rebuild. Perform.</div></div>
-    <div class="footer__col"><span class="eyebrow">Consultancy</span><a href="/consultancy/">Services</a><a href="/consultancy/#process">Where we start</a><a href="/contact/?topic=consultation">Book a consultation</a></div>
-    <div class="footer__col"><span class="eyebrow">Tools</span><a href="/planner/">Re. Planner</a><a href="/academy/">Re. Academy</a><a href="/contact/?topic=demo">Request a demo</a><a href="https://app.re-consultancy.me">Client login</a></div>
-    <div class="footer__col"><span class="eyebrow">Re.</span><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/contact/">Contact</a><a href="mailto:hello@re-consultancy.me">hello@re-consultancy.me</a><span>Re. LLC · UAE</span></div>
+<footer class="re-footer">
+  <div class="re-wrap re-footer__grid">
+    <div class="re-footer__brand">
+      <a class="re-wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="re-wordmark__dash" aria-hidden="true"></span></a>
+      <div class="re-footer__tag">Rethink. Rebuild. Perform.</div>
+      <address class="re-footer__address">Masdar City Free Zone,<br>Abu Dhabi, United Arab Emirates</address>
+      <div class="re-footer__social">
+        <a href="https://www.instagram.com/re.consultancy/" target="_blank" rel="noopener" aria-label="Re. on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/re.consultancy" target="_blank" rel="noopener" aria-label="Re. on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="5" cy="4.9" r="1.4" fill="currentColor" stroke="none"/><path d="M5 9.4V19"/><path d="M11.2 19V9.4"/><path d="M11.2 14a3.9 3.9 0 0 1 7.8 0v5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="re-footer__col">
+      <h2 class="re-footer__head">Consultancy</h2>
+      <a href="/consultancy/#services">Services</a>
+      <a href="/consultancy/#standards">Health &amp; safety</a>
+      <a href="/consultancy/#standards">Sustainability</a>
+      <a href="/contact/?topic=consultation">Book a consultation</a>
+    </div>
+    <div class="re-footer__col">
+      <h2 class="re-footer__head">Tools</h2>
+      <a href="/planner/">Re. Planner</a>
+      <a href="/academy/">Re. Academy</a>
+      <a href="/academy/sample/">Watch a free training</a>
+      <a href="/contact/?topic=demo">Request a demo</a>
+      <a href="https://app.re-consultancy.me">Client login</a>
+    </div>
+    <div class="re-footer__col">
+      <h2 class="re-footer__head">Re.</h2>
+      <a href="/about/">About</a>
+      <a href="/insights/">Insights</a>
+      <a href="/contact/">Contact</a>
+      <a href="mailto:hello@re-consultancy.me">hello@re-consultancy.me</a>
+      <span>Re. LLC · UAE</span>
+    </div>
   </div>
-  <div class="wrap footer__bar"><span>© 2026 Re. LLC</span></div>
+  <div class="re-footer__rule"><div class="re-wrap re-footer__bar"><span>© 2026 Re. LLC</span></div></div>
 </footer>
 
 <div class="sticky-cta"><a class="btn" href="/contact/?topic=demo">Request a demo</a><a class="btn2" href="/academy/sample/">Watch a training</a></div>
 
-<script>
-(function(){
-  var header=document.querySelector('.site-header');
-  function onScroll(){header.classList.toggle('is-compact',(window.scrollY||0)>40);}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  var btn=document.querySelector('.menu-btn'),menu=document.getElementById('mobile-menu');
-  btn.addEventListener('click',function(){
-    var open=menu.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded',open?'true':'false');
-    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
-  });
-})();
-</script>
+<script src="/assets/js/chrome.js?v=dev" defer></script>
 </body>
 </html>
