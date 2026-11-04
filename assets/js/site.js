@@ -23,6 +23,9 @@
   function scrollToSection(id, smooth) {
     var el = document.getElementById(id);
     if (!el) return false;
+    // A link to a collapsed list opens it.
+    var list = el.querySelector('details');
+    if (list) list.open = true;
     var header = document.querySelector('.re-header');
     var offset = header ? header.getBoundingClientRect().height : 0;
     var y = Math.max(0, el.getBoundingClientRect().top + window.scrollY - offset);

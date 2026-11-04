@@ -1779,3 +1779,67 @@ input:focus, textarea:focus { outline: none; border-color: var(--forest); }
   align-items: baseline;
   justify-content: space-between;
 }
+
+/* ----------------------------------------------------------- home page */
+
+.hero .re-btn { font-size: 16px; }
+#help .kicker, #how .kicker, #tools .kicker, #why .kicker { margin: 0 0 16px; }
+
+.home-band { padding: 96px 0; border-top: 1px solid var(--rule); }
+.home-sits { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.home-sit {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: baseline;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.home-sit p { margin: 0; }
+.home-sit__who { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--moss); }
+.home-sit__quote { font-family: var(--display); font-size: 24px; font-weight: 600; line-height: 1.25; letter-spacing: -.02em; text-wrap: balance; }
+.home-sit__answer { font-size: 16px; line-height: 1.55; text-wrap: pretty; }
+
+.process .phase__meta { color: var(--forest); }
+.process .phase__meta span:first-child { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: -.02em; text-transform: none; }
+.home-note { margin: 28px 0 0; font-size: 15px; }
+
+.home-more { padding: 28px 0; border-bottom: 1px solid var(--rule); }
+.home-details summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; padding: 8px 0; cursor: pointer; list-style: none; }
+.home-details summary::-webkit-details-marker { display: none; }
+.home-details summary::after { content: '+'; margin-left: auto; font-family: var(--display); font-size: 26px; line-height: 1; color: var(--moss); }
+.home-details[open] summary::after { content: '−'; }
+.home-details summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.home-details__title { font-family: var(--display); font-size: 24px; font-weight: 600; letter-spacing: -.02em; }
+.home-details__hint { font-size: 14px; color: var(--moss); }
+.home-details .services__grid { margin-top: 24px; margin-bottom: 20px; }
+
+.home-tools { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; padding-top: 96px; padding-bottom: 96px; }
+.home-tools__lede { margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: var(--stone); }
+.home-tools__grid { display: grid; gap: 16px; }
+.home-tool { display: grid; gap: 4px; padding: 24px 26px; border: 1px solid rgba(246, 242, 234, .25); color: var(--ivory); text-decoration: none; transition: border-color .2s ease; }
+.home-tool:hover { border-color: var(--gold); color: var(--ivory); }
+.home-tool__name { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.home-tool__line { font-family: var(--display); font-size: 24px; font-weight: 600; letter-spacing: -.02em; }
+.home-tool__cue { margin-top: 8px; font-size: 14px; color: var(--stone); }
+
+.home-why { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 64px; align-items: center; padding-top: 96px; padding-bottom: 96px; }
+.home-why__photo { aspect-ratio: 4 / 5; }
+.home-why__quote { margin: 24px 0 0; font-family: var(--display); font-size: 24px; font-weight: 600; line-height: 1.35; letter-spacing: -.02em; max-width: 26em; text-wrap: pretty; }
+.home-why__who { margin: 20px 0 0; font-size: 15px; line-height: 1.55; }
+.home-why__who strong { font-weight: 600; }
+.home-link { display: inline-block; margin-top: 18px; font-weight: 600; font-size: 15px; color: var(--forest); }
+
+.home-cta { padding: 72px 0; border-top: 1px solid var(--rule); }
+.home-cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+.home-cta__btn { font-size: 16px; }
+
+@media (max-width: 900px) {
+  .home-band { padding: 64px 0; }
+  .home-sit { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 24px 0; }
+  .home-sit__quote { font-size: 21px; }
+  .home-tools, .home-why { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 64px; padding-bottom: 64px; }
+  .home-why__photo { max-width: 300px; }
+  .home-why__quote { font-size: 21px; }
+  .home-cta { padding: 56px 0; }
+}
