@@ -3,158 +3,177 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Re. Planner | Re.</title>
-<meta name="description" content="Re. Planner: from the first business plan to every week of trading. A weekly P&amp;L against budget, forecast and last year, a business health score and an action plan for every venue.">
+<title>Re. Planner | Business plans, weekly P&amp;L and action plans · Re.</title>
+<meta name="description" content="Re. Planner: build the business plan, track the weekly P&amp;L against budget and last year, see one business health score and turn it into an action plan, for one venue or a whole group.">
 <meta name="theme-color" content="#1B2E27">
 <link rel="canonical" href="https://re-consultancy.me/planner/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Re. Planner | Re.">
-<meta property="og:description" content="Your P&amp;L, every week. Business plans, weekly P&amp;L, business health and action plans for one venue or a whole group.">
+<meta property="og:site_name" content="Re.">
+<meta property="og:title" content="Re. Planner | Business plans, weekly P&amp;L and action plans · Re.">
+<meta property="og:description" content="Know your numbers. Know your next move. Plan, measure and improve your hospitality business in one place.">
+<meta property="og:url" content="https://re-consultancy.me/planner/">
 <meta property="og:image" content="https://re-consultancy.me/assets/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/poppins-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/jetbrainsmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/fonts.css?v=dev">
-<link rel="stylesheet" href="/assets/css/product.css?v=dev">
+<link rel="stylesheet" href="/assets/css/re.css?v=dev">
 </head>
 <body>
-
-<header class="site-header" id="top">
-  <div class="wrap site-header__inner">
-    <a class="wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></a>
-    <nav class="nav" aria-label="Primary">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="/" aria-label="Re. home"><img src="/assets/img/re-logo.png" alt="Re-" width="934" height="430"></a>
+    <nav class="re-nav" aria-label="Main">
       <a href="/consultancy/">Consultancy</a>
       <a href="/planner/" aria-current="page">Planner</a>
       <a href="/academy/">Academy</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <div class="header-actions">
-      <a class="login" href="https://app.re-consultancy.me">Client login →</a>
-      <a class="btn" href="/contact/?topic=demo">Request a demo</a>
-      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    <div class="hdr__actions">
+      <a class="re-login" href="https://app.re-consultancy.me/">Client login</a>
+      <a class="btn re-talk" href="/contact/#consultation">Let's talk</a>
+      <button class="re-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1B2E27" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
     </div>
   </div>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
-    <a class="item" href="/consultancy/">Consultancy</a>
-    <a class="item" href="/planner/" aria-current="page">Planner</a>
-    <a class="item" href="/academy/">Academy</a>
-    <a class="item" href="/about/">About</a>
-    <a class="item" href="/contact/">Contact</a>
-    <a class="btn" href="/contact/?topic=demo">Request a demo</a>
-    <a class="btn2" href="/contact/?topic=consultation">Book a consultation</a>
-    <a class="login" href="https://app.re-consultancy.me">Client login</a>
+  <nav id="mnav" class="mnav re-fade" aria-label="Mobile" hidden>
+    <div class="wrap">
+      <a class="mnav__link" href="/consultancy/">Consultancy</a>
+      <a class="mnav__link" href="/planner/" aria-current="page">Planner</a>
+      <a class="mnav__link" href="/academy/">Academy</a>
+      <a class="mnav__link" href="/about/">About</a>
+      <a class="mnav__link" href="/contact/">Contact</a>
+      <div class="mnav__ctas">
+        <a class="btn2" href="https://app.re-consultancy.me/">Client login</a>
+        <a class="btn" href="/contact/#consultation">Let's talk</a>
+      </div>
+    </div>
   </nav>
 </header>
+<main id="main">
 
-<main>
-
-  <section class="hero">
-    <div class="wrap hero__grid">
-      <div class="hero__copy">
-        <p class="eyebrow gold">Re. Planner · planning and performance</p>
-        <h1>Your P&amp;L, every week.</h1>
-        <p class="lede">From the first business plan to every week of trading. Built to the operator's week, not the accountant's year, so you can act before the month closes.</p>
-        <div class="actions"><a class="btn" href="/contact/?topic=demo">Request a demo</a><a class="btn2" href="#journey">See the journey</a></div>
-      </div>
-      <figure class="card pl-card" aria-label="Example weekly P&amp;L" style="margin:0">
-        <div class="pl-card__top"><span class="eyebrow" style="margin:0">Weekly P&amp;L · Week 41</span><span>Example venue · Dubai · AED</span></div>
-        <div class="disp pl-card__headline">Sales beat budget by AED 14.6k.</div>
-        <table class="pl">
-          <thead><tr><th>Line</th><th>Actual</th><th>Budget</th><th>Variance</th></tr></thead>
-          <tbody>
-            <tr><td>Sales</td><td>412,600</td><td>398,000</td><td class="up">+3.7% ▲</td></tr>
-            <tr><td>Spend per head</td><td>144</td><td>137</td><td class="up">+5.1% ▲</td></tr>
-            <tr><td>F&amp;B cost</td><td>27.4%</td><td>26.0%</td><td class="down">+1.4 pts ▼</td></tr>
-            <tr><td>EBITDA</td><td>71,300</td><td>64,500</td><td class="up">+10.5% ▲</td></tr>
-          </tbody>
-        </table>
-        <figcaption class="note">Example data</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section id="journey" class="sec band journey">
-    <div class="wrap">
-      <p class="eyebrow">The journey</p>
-      <h2>From concept to P&amp;L, in six steps.</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step__copy"><p class="eyebrow gold" style="margin:0">01 · Business plan</p><h3>Start from the venue you have in mind.</h3><p>Concept, seats and opening month; sales by meal period, day and season; costs, team and rent; investment, ROI, payback and shareholders. Export to PDF, Excel or Word, or fill the client input workbook.</p></div>
-        </div>
-        <div class="step">
-          <div class="step__copy"><p class="eyebrow gold" style="margin:0">02 · Forecast · 03 · Budget</p><h3>When you open, the plan becomes the budget.</h3><p>Nothing is entered twice. Import your own budget workbook, or build it with us, and update the forecast as the year moves.</p></div>
-        </div>
-        <div class="step">
-          <div class="step__copy"><p class="eyebrow gold" style="margin:0">04 · Weekly P&amp;L</p><h3>Each venue enters its own week.</h3><p>Sales, covers, costs and manning, once a week. Weeks roll up into the month, against budget, forecast and last year.</p></div>
-        </div>
-        <div class="step">
-          <div class="step__copy"><p class="eyebrow gold" style="margin:0">05 · Business health</p><h3>One score out of 100, six pillars.</h3><p>Graded A Excellent, B Healthy, C Watch, D At risk, against targets you set per venue.</p>
-            <div class="pillars"><span class="tag">Profitability &amp; cost 30%</span><span class="tag">Commercial 25%</span><span class="tag">Guest 15%</span><span class="tag">Operations 12.5%</span><span class="tag">Menu 10%</span><span class="tag">People 7.5%</span></div></div>
-        </div>
-        <div class="step">
-          <div class="step__copy"><p class="eyebrow gold" style="margin:0">06 · Action plan</p><h3>What to fix next, and who owns it.</h3><p>Actions from a library of proven fixes, ranked by the health points each wins back, each with an owner such as the GM or Executive Chef.</p></div>
-        </div>
+<!-- HERO + DASHBOARD -->
+<section class="m-pt-20" style="padding:40px 0 0">
+  <div class="wrap">
+   <div class="re-rise m-panel" style="background:#EDE8DD;border-radius:20px;padding:48px 40px 40px">
+    <div class="eyebrow gold" style="margin-bottom:16px;font-size:13px">Re. Planner</div>
+    <h1 class="disp re-h1" style="margin:0 0 16px;font-size:60px;line-height:66px;max-width:760px">Know your numbers. Know your next move.</h1>
+    <p style="margin:0 0 32px;font-size:19px;line-height:30px;color:#3E5248;max-width:640px">Plan, measure, and improve your hospitality business. All in one place.</p>
+    <div style="background:#FFFFFF;border:1px solid #DDD6C8;border-radius:14px;padding:20px;box-shadow:0 24px 48px rgba(27,46,39,.10)">
+      <div class="eyebrow" style="margin:0 0 14px 2px">Business performance · Sample venue · Week 44</div>
+      <img class="re-reveal re-desk-only" src="/assets/img/planner-kpis-8.webp" alt="Re. Planner weekly P&amp;L for a sample venue: eight KPI cards, each marked on target, watch or off target" width="1568" height="572" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:8px">
+      <div class="re-mob-only">
+        <img id="kpi8" src="/assets/img/planner-kpis-8.webp" alt="All eight KPI cards for the sample venue" width="1568" height="572" loading="lazy" hidden style="width:100%;height:auto;display:block;border-radius:8px">
+        <img id="kpi4" src="/assets/img/planner-kpis-4.webp" alt="Four KPI cards for the sample venue: P&amp;L score, sales, COGS and gross profit" width="1100" height="688" style="width:100%;height:auto;display:block;border-radius:8px">
+        <button type="button" class="kpi-btn" aria-expanded="false" data-toggle="kpi8" data-label-open="Show fewer metrics" data-label-closed="View all 8 metrics" onclick="document.getElementById('kpi4').hidden=this.getAttribute('aria-expanded')!=='true'">View all 8 metrics</button>
       </div>
     </div>
-  </section>
-
-  <section class="sec faq">
-    <div class="wrap faq__grid">
-      <div class="faq__title"><p class="eyebrow">Questions</p><h2>Planner, plainly.</h2></div>
-      <div class="faq__list">
-        <details open><summary>Can we use it before we open?</summary><p>Yes. Build the business plan first; on opening it becomes the venue's budget.</p></details>
-        <details><summary>One venue or a whole group?</summary><p>Both. Managers see their own venues; owners see every venue side by side.</p></details>
-        <details><summary>Who can see our numbers?</summary><p>Only the people you invite. Your financials are kept confidential and never shared or compared with other clients.</p></details>
-        <details><summary>Does it replace our accountant or POS?</summary><p>No. Your accounts stay with your accountant. Managers enter the week's results; POS and inventory links are planned.</p></details>
-        <details><summary>How is it priced?</summary><p>Per venue, monthly or annually, on its own or together with Re. Academy. Prices are shared in the demo meeting.</p></details>
-      </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a href="/contact/#demo-planner" class="btn re-full" style="padding:15px 24px;font-size:15px">Request a demo</a>
+      <a href="#tour" class="btn2 re-full" style="padding:14px 24px;font-size:15px;background:#FBF9F4">Explore the platform&nbsp;&nbsp;↓</a>
     </div>
-  </section>
-
-  <section class="band together">
-    <div class="wrap together__inner">
-      <div><p class="eyebrow gold">Better together · Re. Academy</p><h2>See your team's training next to your P&amp;L, under the same login.</h2></div>
-      <a class="btn2" href="/academy/">Explore Re. Academy</a>
-    </div>
-  </section>
-
-  <section class="final">
-    <div class="wrap final__inner">
-      <h2>See your own week in the Planner.</h2>
-      <div class="actions"><a class="btn-ivory" href="/contact/?topic=demo">Request a demo</a><a class="link" href="/contact/?topic=consultation">Prefer advice first? Book a consultation →</a></div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="wrap footer__grid">
-    <div><a class="wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></a><div style="color:var(--ivory);margin-top:12px">Rethink. Rebuild. Perform.</div></div>
-    <div class="footer__col"><span class="eyebrow">Consultancy</span><a href="/consultancy/">Services</a><a href="/consultancy/#process">Where we start</a><a href="/contact/?topic=consultation">Book a consultation</a></div>
-    <div class="footer__col"><span class="eyebrow">Tools</span><a href="/planner/">Re. Planner</a><a href="/academy/">Re. Academy</a><a href="/contact/?topic=demo">Request a demo</a><a href="https://app.re-consultancy.me">Client login</a></div>
-    <div class="footer__col"><span class="eyebrow">Re.</span><a href="/about/">About</a><a href="/insights/">Insights</a><a href="/contact/">Contact</a><a href="mailto:hello@re-consultancy.me">hello@re-consultancy.me</a><span>Re. LLC · UAE</span></div>
+   </div>
   </div>
-  <div class="wrap footer__bar"><span>© 2026 Re. LLC</span></div>
+</section>
+
+<!-- PRODUCT TOUR -->
+<section id="tour" class="sec" style="padding-top:80px;padding-bottom:64px;scroll-margin-top:72px">
+  <div class="wrap">
+    <div class="eyebrow gold" style="margin-bottom:14px;font-size:13px">Interactive product tour</div>
+    <h2 class="disp h2" style="margin:0 0 28px">One tour. Four decisions.</h2>
+    <div role="tablist" aria-label="Planner tour" class="re-scroll" data-tabs="tour" style="display:grid;grid-template-columns:repeat(4,minmax(min(100%,150px),1fr));gap:12px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px">
+      <button class="re-tour" type="button" role="tab" id="tour-plan" aria-controls="tourp-plan" aria-selected="true" data-key="plan"><span class="k">01</span>Plan</button>
+      <button class="re-tour" type="button" role="tab" id="tour-measure" aria-controls="tourp-measure" aria-selected="false" data-key="measure"><span class="k">02</span>Measure</button>
+      <button class="re-tour" type="button" role="tab" id="tour-diagnose" aria-controls="tourp-diagnose" aria-selected="false" data-key="diagnose"><span class="k">03</span>Diagnose</button>
+      <button class="re-tour" type="button" role="tab" id="tour-improve" aria-controls="tourp-improve" aria-selected="false" data-key="improve"><span class="k">04</span>Improve</button>
+    </div>
+    <div id="tourp-plan" role="tabpanel" aria-labelledby="tour-plan" data-panel="tour" data-key="plan" style="background:#FFFFFF;border:1px solid #DDD6C8;border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;gap:28px 44px;align-items:center">
+      <div class="re-fade" style="flex:1 1 340px;min-width:0;padding:8px 0 8px 8px">
+        <div class="eyebrow gold" style="margin-bottom:12px">01 / Plan</div>
+        <h3 class="disp" style="font-size:30px;line-height:38px;margin:0 0 12px">Build the foundation.</h3>
+        <p style="margin:0 0 20px;font-size:17px;line-height:27px;color:#3E5248">Business plan, forecast and budget for a new concept or an open venue.</p>
+        <div style="font-size:14px;color:#57695E;margin-bottom:16px">Business plans · Budgets · Forecasts</div>
+        <button type="button" class="re-textbtn" data-next="tour">Next: Measure →</button>
+      </div>
+      <div class="re-fade" style="flex:1.5 1 520px;min-width:0"><img class="shot" src="/assets/img/planner-tour-plan.webp" alt="Re. Planner business plan results: year-1 sales, EBITDA, break-even and key ratios" width="960" height="600" loading="lazy"></div>
+    </div>
+    <div id="tourp-measure" role="tabpanel" aria-labelledby="tour-measure" data-panel="tour" data-key="measure" hidden style="background:#FFFFFF;border:1px solid #DDD6C8;border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;gap:28px 44px;align-items:center">
+      <div class="re-fade" style="flex:1 1 340px;min-width:0;padding:8px 0 8px 8px">
+        <div class="eyebrow gold" style="margin-bottom:12px">02 / Measure</div>
+        <h3 class="disp" style="font-size:30px;line-height:38px;margin:0 0 12px">Stay on top of performance.</h3>
+        <p style="margin:0 0 20px;font-size:17px;line-height:27px;color:#3E5248">Each venue enters its own week. Results roll up into the month, against budget, forecast and last year.</p>
+        <div style="font-size:14px;color:#57695E;margin-bottom:16px">Weekly P&amp;L · Actuals · Variances</div>
+        <button type="button" class="re-textbtn" data-next="tour">Next: Diagnose →</button>
+      </div>
+      <div class="re-fade" style="flex:1.5 1 520px;min-width:0"><img class="shot" src="/assets/img/planner-tour-measure.webp" alt="Re. Planner: entering P&amp;L actuals for week 44, with sales, store EBITDA and variance to budget" width="1181" height="738" loading="lazy"></div>
+    </div>
+    <div id="tourp-diagnose" role="tabpanel" aria-labelledby="tour-diagnose" data-panel="tour" data-key="diagnose" hidden style="background:#FFFFFF;border:1px solid #DDD6C8;border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;gap:28px 44px;align-items:center">
+      <div class="re-fade" style="flex:1 1 340px;min-width:0;padding:8px 0 8px 8px">
+        <div class="eyebrow gold" style="margin-bottom:12px">03 / Diagnose</div>
+        <h3 class="disp" style="font-size:30px;line-height:38px;margin:0 0 12px">Know what needs attention.</h3>
+        <p style="margin:0 0 20px;font-size:17px;line-height:27px;color:#3E5248">One health score out of 100 across six pillars, graded against the targets you set for each venue.</p>
+        <div style="font-size:14px;color:#57695E;margin-bottom:16px">Business health · Gaps · Priorities</div>
+        <button type="button" class="re-textbtn" data-next="tour">Next: Improve →</button>
+      </div>
+      <div class="re-fade" style="flex:1.5 1 520px;min-width:0"><img class="shot" src="/assets/img/planner-tour-diagnose.webp" alt="Re. Planner health report: score 87 out of 100 with pillar scores" width="2104" height="1016" loading="lazy"></div>
+    </div>
+    <div id="tourp-improve" role="tabpanel" aria-labelledby="tour-improve" data-panel="tour" data-key="improve" hidden style="background:#FFFFFF;border:1px solid #DDD6C8;border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;gap:28px 44px;align-items:center">
+      <div class="re-fade" style="flex:1 1 340px;min-width:0;padding:8px 0 8px 8px">
+        <div class="eyebrow gold" style="margin-bottom:12px">04 / Improve</div>
+        <h3 class="disp" style="font-size:30px;line-height:38px;margin:0 0 12px">Turn insight into action.</h3>
+        <p style="margin:0 0 20px;font-size:17px;line-height:27px;color:#3E5248">Fixes from a library of proven actions, ranked by the health points each one wins back, each with an owner.</p>
+        <div style="font-size:14px;color:#57695E;margin-bottom:16px">Action plans · Owners · Accountability</div>
+        <button type="button" class="re-textbtn" data-next="tour">Next: Plan →</button>
+      </div>
+      <div class="re-fade" style="flex:1.5 1 520px;min-width:0"><img class="shot" src="/assets/img/planner-tour-improve.webp" alt="Re. Planner action plan: prioritised fixes with owners and due dates" width="1144" height="715" loading="lazy"></div>
+    </div>
+    <div style="margin-top:20px">
+      <button class="re-faq" type="button" aria-expanded="false" aria-controls="faq" data-toggle="faq">Common questions&nbsp;&nbsp;<span class="sign" aria-hidden="true"></span></button>
+      <div id="faq" class="re-fade" hidden style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 40px;border-top:1px solid #DDD6C8">
+        <div style="padding:16px 0;border-bottom:1px solid #ECE6DA"><h3 style="font-size:15px;font-weight:600;margin:0 0 4px">Can we use it before we open?</h3><div style="font-size:15px;line-height:24px;color:#3E5248">Yes. Build the business plan first; on opening it becomes the venue’s budget.</div></div>
+        <div style="padding:16px 0;border-bottom:1px solid #ECE6DA"><h3 style="font-size:15px;font-weight:600;margin:0 0 4px">One venue or a whole group?</h3><div style="font-size:15px;line-height:24px;color:#3E5248">Both. Managers see their own venues; owners see every venue side by side.</div></div>
+        <div style="padding:16px 0;border-bottom:1px solid #ECE6DA"><h3 style="font-size:15px;font-weight:600;margin:0 0 4px">Who can see our numbers?</h3><div style="font-size:15px;line-height:24px;color:#3E5248">Only the people you invite. Your numbers are never shared or compared with other clients.</div></div>
+        <div style="padding:16px 0;border-bottom:1px solid #ECE6DA"><h3 style="font-size:15px;font-weight:600;margin:0 0 4px">Does it replace our accountant or POS?</h3><div style="font-size:15px;line-height:24px;color:#3E5248">No. Your accounts stay with your accountant. Managers enter the week’s results; POS and inventory links are planned.</div></div>
+        <div style="padding:16px 0;border-bottom:1px solid #ECE6DA"><h3 style="font-size:15px;font-weight:600;margin:0 0 4px">Do we need Re. Consultancy to use it?</h3><div style="font-size:15px;line-height:24px;color:#3E5248">No. Re. Planner works on its own, with or without Re. Academy or consultancy.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO INVITATION -->
+<section class="m-pb-40" style="padding:0 0 80px">
+  <div class="wrap">
+   <div class="panel-dark cta-row">
+    <div style="flex:1 1 520px;min-width:0">
+      <div class="eyebrow" style="color:#D4AF37;margin-bottom:12px;font-size:13px">See it in action</div>
+      <h2 class="disp" style="margin:0 0 10px;font-size:40px;line-height:48px">See Re. Planner in action.</h2>
+      <p style="margin:0;color:#DCD5C6;font-size:17px;line-height:27px">One platform. Clearer numbers. Better decisions.</p>
+    </div>
+    <a href="/contact/#demo-planner" class="btn-ivory re-full" style="padding:16px 28px;font-size:15px">Request a demo</a>
+   </div>
+  </div>
+</section>
+</main>
+<footer class="ftr">
+  <div class="wrap">
+    <img src="/assets/img/re-logo.png" alt="Re-" width="934" height="430">
+    <span>Rethink. Rebuild. Perform. · Re. LLC · UAE</span>
+    <a href="/consultancy/">Consultancy</a>
+    <a href="/planner/">Planner</a>
+    <a href="/academy/">Academy</a>
+    <a href="/about/">About</a>
+    <a href="/insights/">Insights</a>
+    <a href="/contact/">Contact</a>
+    <a href="https://app.re-consultancy.me/">Client login</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+  </div>
 </footer>
-
-<div class="sticky-cta"><a class="btn" href="/contact/?topic=demo">Request a demo</a><a class="btn2" href="/contact/">Ask a question</a></div>
-
-<script>
-(function(){
-  var header=document.querySelector('.site-header');
-  function onScroll(){header.classList.toggle('is-compact',(window.scrollY||0)>40);}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  var btn=document.querySelector('.menu-btn'),menu=document.getElementById('mobile-menu');
-  btn.addEventListener('click',function(){
-    var open=menu.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded',open?'true':'false');
-    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
-  });
-})();
-</script>
+<script src="/assets/js/re.js?v=dev" defer></script>
 </body>
 </html>

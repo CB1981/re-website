@@ -3,201 +3,254 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Re. | Hospitality advisory, UAE</title>
-<meta name="description" content="Re. works alongside owners and operators to rethink concepts, rebuild operations and make restaurants perform: on the floor, in the kitchen and on the P&amp;L.">
+<title>Re. | Hospitality consultancy, Re. Planner and Re. Academy · UAE</title>
+<meta name="description" content="Re. combines hands-on hospitality consultancy with Re. Planner and Re. Academy, helping owners, operators and investors across the UAE and GCC build businesses that perform.">
 <meta name="theme-color" content="#1B2E27">
 <link rel="canonical" href="https://re-consultancy.me/">
-
 <meta property="og:type" content="website">
-<meta property="og:title" content="Re. | Hospitality advisory, UAE">
-<meta property="og:description" content="Rethink. Rebuild. Perform. Concept, operations and commercial performance for restaurants and hospitality groups across the UAE, Saudi Arabia and Lebanon.">
-<meta property="og:image" content="assets/img/og-cover.jpg">
+<meta property="og:site_name" content="Re.">
+<meta property="og:title" content="Re. | Hospitality consultancy, Re. Planner and Re. Academy · UAE">
+<meta property="og:description" content="Better hospitality. Stronger performance. Consultancy, Re. Planner and Re. Academy for owners, operators and investors.">
+<meta property="og:url" content="https://re-consultancy.me/">
+<meta property="og:image" content="https://re-consultancy.me/assets/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
-
-<link rel="icon" href="assets/img/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-
-<link rel="preload" href="assets/fonts/poppins-900-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/jetbrainsmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/fonts.css?v=dev">
-<link rel="stylesheet" href="assets/css/styles.css?v=dev">
-<script>
-// Links shared before the site had real pages: /#contact and friends.
-(function () {
-  var moved = { contact: '/contact/', intake: '/intake/',
-                article: '/insights/why-most-menus-are-priced-from-the-wrong-end/' };
-  var to = moved[(location.hash || '').replace('#', '')];
-  if (to) location.replace(to);
-})();
-</script>
+<link rel="icon" href="/assets/img/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css?v=dev">
+<link rel="stylesheet" href="/assets/css/re.css?v=dev">
 </head>
 <body>
-<header class="site-header">
-  <div class="shell site-header__inner">
-    <a class="wordmark" href="#top" data-go="top" aria-label="Re. home"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></a>
-    <nav class="site-nav" aria-label="Primary">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="/" aria-label="Re. home"><img src="/assets/img/re-logo.png" alt="Re-" width="934" height="430"></a>
+    <nav class="re-nav" aria-label="Main">
       <a href="/consultancy/">Consultancy</a>
       <a href="/planner/">Planner</a>
       <a href="/academy/">Academy</a>
       <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
     </nav>
-    <a class="site-nav__cta" href="/contact/">Contact</a>
+    <div class="hdr__actions">
+      <a class="re-login" href="https://app.re-consultancy.me/">Client login</a>
+      <a class="btn re-talk" href="/contact/#consultation">Let's talk</a>
+      <button class="re-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1B2E27" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </div>
   </div>
+  <nav id="mnav" class="mnav re-fade" aria-label="Mobile" hidden>
+    <div class="wrap">
+      <a class="mnav__link" href="/consultancy/">Consultancy</a>
+      <a class="mnav__link" href="/planner/">Planner</a>
+      <a class="mnav__link" href="/academy/">Academy</a>
+      <a class="mnav__link" href="/about/">About</a>
+      <a class="mnav__link" href="/contact/">Contact</a>
+      <div class="mnav__ctas">
+        <a class="btn2" href="https://app.re-consultancy.me/">Client login</a>
+        <a class="btn" href="/contact/#consultation">Let's talk</a>
+      </div>
+    </div>
+  </nav>
 </header>
+<main id="main">
 
-<main>
-
-
-  <section class="shell hero" id="top">
-    <div class="hero__copy">
-      <p class="kicker">Hospitality strategy · Operations · Performance</p>
-      <h1 class="h1-hero">From concept to P&amp;L, <span class="h1-hero__muted">we make hospitality perform.</span></h1>
-      <div class="hero__ledes">
-        <p class="hero__lede hero__lede--lead">Re. helps owners, operators and investors build stronger concepts, strengthen operations and improve commercial performance.</p>
-        <p class="hero__lede">From strategy and pre-opening to operations, people, guest experience and profitability, we turn hospitality challenges into practical, measurable progress.</p>
-      </div>
-      <div class="hero__actions">
-        <a class="btn-solid" href="#services" data-go="services">Explore services</a>
-        <a class="btn-underline" href="/contact/">Start a conversation</a>
-      </div>
+<!-- HERO -->
+<section class="home-hero" style="position:relative;min-height:760px;overflow:hidden;background:#1B2E27;color:#F6F2EA;display:flex;align-items:flex-end">
+  <img class="re-reveal" src="/assets/img/home-hero-pass.webp" alt="Chefs at work on the pass of a busy restaurant kitchen" width="994" height="883" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,46,39,.92) 0%,rgba(27,46,39,.72) 42%,rgba(27,46,39,.15) 100%)"></div>
+  <div class="wrap re-rise" style="position:relative;width:100%;box-sizing:border-box;padding-top:120px;padding-bottom:88px">
+    <div class="eyebrow" style="color:#D4AF37;margin-bottom:22px;font-size:13px">Hospitality consultancy · Re. Planner · Re. Academy</div>
+    <h1 class="disp" style="margin:0 0 24px;font-size:76px;line-height:80px;max-width:860px">Better hospitality. Stronger performance.</h1>
+    <p style="margin:0 0 36px;font-size:19px;line-height:30px;color:#DCD5C6;max-width:600px">Hands-on hospitality expertise and practical tools for owners, operators, and investors.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+      <a href="#discover" class="btn-ivory re-full" style="padding:15px 24px;font-size:15px">Discover Re.&nbsp;&nbsp;↓</a>
+      <a href="/contact/#consultation" class="btn-line">Let's talk</a>
     </div>
-    <div class="hero__media">
-      <div class="photo photo--hero">
-        <img src="assets/img/hero-kitchen.webp" width="994" height="883" alt="Chefs working a busy open kitchen under warm light" fetchpriority="high">
-      </div>
-      <div class="hero__badge">
-        <p class="hero__badge-kicker">Rethink · Rebuild · Perform</p>
-        <p class="hero__badge-line">Strategy that works on the floor.<br>Change that shows in the numbers.</p>
-      </div>
-    </div>
-  </section>
-  <section class="stats" aria-label="Re. in numbers">
-    <div class="shell stats__inner">
-      <div class="stat">
-        <span class="stat__figure">20<span class="stat__figure-suffix">+</span></span>
-        <span class="stat__label">Years operating</span>
-      </div>
-      <div class="stat">
-        <span class="stat__figure">3</span>
-        <span class="stat__label">Markets · UAE, KSA, Lebanon</span>
-      </div>
-      <div class="stat">
-        <span class="stat__figure">10<span class="stat__figure-suffix">wk</span></span>
-        <span class="stat__label">Diagnostic to implementation</span>
-      </div>
-      <div class="stat">
-        <span class="stat__figure">6</span>
-        <span class="stat__label">Service disciplines</span>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section class="services" id="services">
-    <div class="shell services__inner">
-      <div class="services__head">
-        <div class="services__intro">
-          <p class="kicker">Three ways in</p>
-          <h2 class="h2">Advice, or the tools to run it yourself.</h2>
-          <p class="services__lede">Take the consultancy on its own, the tools on their own, or both together under one login.</p>
+<!-- DISCOVER RE. -->
+<section id="discover" class="sec" style="scroll-margin-top:72px">
+  <div class="wrap">
+    <div class="eyebrow gold" style="margin-bottom:14px;font-size:13px">Discover Re.</div>
+    <h2 class="disp h2" style="margin:0 0 32px;max-width:900px">Expertise that drives change. Tools that sustain it.</h2>
+    <div role="tablist" aria-label="Ways to work with Re." data-tabs="door" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;margin-bottom:24px">
+      <button class="re-tab" type="button" role="tab" id="door-cons" aria-controls="doorp-cons" aria-selected="true" data-key="cons"><span class="k">01</span><span class="l">Consultancy</span><span class="s">Hands-on advisory</span></button>
+      <button class="re-tab" type="button" role="tab" id="door-plan" aria-controls="doorp-plan" aria-selected="false" data-key="plan"><span class="k">02</span><span class="l">Re. Planner</span><span class="s">Plan and measure performance</span></button>
+      <button class="re-tab" type="button" role="tab" id="door-acad" aria-controls="doorp-acad" aria-selected="false" data-key="acad"><span class="k">03</span><span class="l">Re. Academy</span><span class="s">Train every role</span></button>
+    </div>
+    <div style="background:#F6F2EA;border-radius:18px;padding:24px">
+      <div id="doorp-cons" role="tabpanel" aria-labelledby="door-cons" data-panel="door" data-key="cons" style="display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+        <div class="re-fade" style="flex:1.3 1 520px;min-width:0"><img src="/assets/img/consultancy-kitchen.webp" alt="A consultant reviewing operations with the head chef in a working kitchen" width="994" height="555" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;display:block"></div>
+        <div class="re-fade" style="flex:1 1 360px;min-width:0;padding:8px 8px 8px 0">
+          <div class="eyebrow gold" style="margin-bottom:14px">Re. Consultancy</div>
+          <h3 class="disp" style="font-size:32px;line-height:40px;margin:0 0 16px">Strategy into action. Expertise into results.</h3>
+          <p style="margin:0 0 22px;font-size:17px;line-height:27px;color:#3E5248">Hands-on advisory to develop concepts, strengthen operations, and improve commercial performance.</p>
+          <div style="font-size:14px;color:#57695E;margin-bottom:28px">Concepts &amp; openings · Operations &amp; standards · Turnarounds</div>
+          <a href="/consultancy/" class="btn re-full">Explore Consultancy</a>
         </div>
       </div>
-      <div class="services__grid">
-        <a class="service service--link" href="/consultancy/">
-          <p class="service__num">01</p>
-          <h3 class="service__title">Consultancy</h3>
-          <p class="service__text">Concept and strategy, operations and people, commercial performance, and the safety and sustainability standards underneath. Starts with a diagnostic.</p>
-          <span class="service__cue">What we take on<span class="insight-card__arrow" aria-hidden="true">→</span></span>
-        </a>
-        <a class="service service--link" href="/planner/">
-          <p class="service__num">02</p>
-          <h3 class="service__title">Re. Planner</h3>
-          <p class="service__text">Your P&amp;L, every week. Business plans for a new opening, then actual against budget, forecast and last year for every venue.</p>
-          <span class="service__cue">See the Planner<span class="insight-card__arrow" aria-hidden="true">→</span></span>
-        </a>
-        <a class="service service--link" href="/academy/">
-          <p class="service__num">03</p>
-          <h3 class="service__title">Re- Academy</h3>
-          <p class="service__text">Short, narrated trainings for every role, in English and Arabic, with classroom sessions, certificates and a record for every employee.</p>
-          <span class="service__cue">See the Academy<span class="insight-card__arrow" aria-hidden="true">→</span></span>
-        </a>
+      <div id="doorp-plan" role="tabpanel" aria-labelledby="door-plan" data-panel="door" data-key="plan" hidden style="display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+        <div class="re-fade" style="flex:1.3 1 520px;min-width:0"><img src="/assets/img/planner-kpis-4.webp" alt="Re. Planner weekly P&amp;L for a sample venue: P&amp;L score on target, sales off target, COGS on watch, gross profit on target" width="1100" height="688" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;border:1px solid #DDD6C8;box-sizing:border-box;display:block"></div>
+        <div class="re-fade" style="flex:1 1 360px;min-width:0;padding:8px 8px 8px 0">
+          <div class="eyebrow gold" style="margin-bottom:14px">Re. Planner</div>
+          <h3 class="disp" style="font-size:32px;line-height:40px;margin:0 0 16px">From planning to performance.</h3>
+          <p style="margin:0 0 22px;font-size:17px;line-height:27px;color:#3E5248">Plan your business, monitor financial performance, and turn insights into better decisions.</p>
+          <div style="font-size:14px;color:#57695E;margin-bottom:28px">Business plans · Weekly P&amp;L · Health report · Action plans</div>
+          <a href="/planner/" class="btn re-full">Explore Re. Planner</a>
+        </div>
+      </div>
+      <div id="doorp-acad" role="tabpanel" aria-labelledby="door-acad" data-panel="door" data-key="acad" hidden style="display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+        <div class="re-fade" style="flex:1.3 1 520px;min-width:0;position:relative">
+          <img src="/assets/img/academy-pass-team.webp" alt="A restaurant team working together at the kitchen pass" width="1200" height="800" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;display:block">
+          <div style="position:absolute;right:20px;bottom:-18px;width:26%;background:#1B2E27;border-radius:22px;padding:5px;box-shadow:0 20px 40px rgba(27,46,39,.3)"><img src="/assets/img/academy-phone.webp" alt="Re. Academy on an employee's phone: up next and completed trainings" width="780" height="1442" loading="lazy" style="width:100%;aspect-ratio:780/1250;object-fit:cover;object-position:center top;border-radius:18px;display:block"></div>
+        </div>
+        <div class="re-fade" style="flex:1 1 360px;min-width:0;padding:8px 8px 8px 0">
+          <div class="eyebrow gold" style="margin-bottom:14px">Re. Academy</div>
+          <h3 class="disp" style="font-size:32px;line-height:40px;margin:0 0 16px">Better learning. Stronger teams.</h3>
+          <p style="margin:0 0 22px;font-size:17px;line-height:27px;color:#3E5248">A continuously growing hospitality learning platform that develops skills and strengthens standards across every role.</p>
+          <div style="font-size:14px;color:#57695E;margin-bottom:28px">Interactive trainings · Quizzes &amp; certificates · Classroom</div>
+          <a href="/academy/" class="btn re-full">Explore Re. Academy</a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="band-forest" id="insights">
-    <div class="shell insights__inner">
-      <div class="insights__head">
-        <p class="kicker kicker--dark">Insights · Featured</p>
-        <a class="btn-underline btn-underline--onDark btn-underline--tight" href="/insights/">All insights</a>
+<!-- THE RE. PHILOSOPHY -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+   <div class="panel-dark">
+    <div class="eyebrow" style="color:#D4AF37;margin-bottom:14px;font-size:13px">The Re. Philosophy</div>
+    <h2 class="disp h2" style="margin:0 0 16px">Rethink. Rebuild. Perform.</h2>
+    <p style="margin:0;font-size:19px;line-height:30px;color:#DCD5C6;max-width:760px">Real expertise. Connected tools. Stronger teams. Working together to build hospitality businesses that perform.</p>
+    <div class="re-steps" data-openclass="has-open">
+      <button class="re-step" type="button" aria-expanded="false" data-toggle="stepm0 stepd0" data-single="phil" aria-controls="stepd0">
+        <span class="n">01</span><span class="l">Rethink.</span><span class="s">See the opportunity.</span><span class="c"></span>
+      </button>
+      <div id="stepm0" class="step-mob re-mob-only re-fade" hidden>
+        <div class="disp" style="font-size:20px;line-height:27px;margin-bottom:8px">See the bigger picture.</div>
+        <p style="margin:0 0 8px;font-size:15px;line-height:24px;color:#3E5248">Challenge assumptions, uncover opportunities, and define a clear direction for the business.</p>
+        <div class="row"><b>Consultancy</b> · Review the concept, the operation, and the numbers on site.</div>
+        <div class="row"><b>Planner</b> · Build the business plan, budget, and forecast.</div>
+        <div class="row"><b>Academy</b> · Assess team skills and identify training gaps.</div>
+        <div class="step-note" style="font-size:12.5px;padding-top:8px">Use one, two or all three. Each works on its own.</div>
       </div>
-      <a class="insight-card" href="/insights/why-most-menus-are-priced-from-the-wrong-end/">
-        <div class="photo photo--insight">
-          <img src="assets/img/insight-cheque.webp" width="994" height="780" alt="A restaurant cheque broken down into cost lines, showing a negative net result" loading="lazy">
-        </div>
-        <div class="insight-card__copy">
-          <span class="insights__byline">6 min read · September 2026</span>
-          <h2 class="h2">Why most menus are priced from the wrong end.</h2>
-          <p class="insights__lede">Cost-plus pricing protects margin on paper and loses it on the floor. A note on building the menu from the guest's cheque backwards.</p>
-          <span class="insight-card__cue">Read the piece<span class="insight-card__arrow" aria-hidden="true">→</span></span>
-        </div>
-      </a>
+      <button class="re-step" type="button" aria-expanded="false" data-toggle="stepm1 stepd1" data-single="phil" aria-controls="stepd1">
+        <span class="n">02</span><span class="l">Rebuild.</span><span class="s">Make change happen.</span><span class="c"></span>
+      </button>
+      <div id="stepm1" class="step-mob re-mob-only re-fade" hidden>
+        <div class="disp" style="font-size:20px;line-height:27px;margin-bottom:8px">Turn strategy into action.</div>
+        <p style="margin:0 0 8px;font-size:15px;line-height:24px;color:#3E5248">Strengthen operations, develop people, and put the right systems in place.</p>
+        <div class="row"><b>Consultancy</b> · Redesign menus, SOPs, and service standards with your team.</div>
+        <div class="row"><b>Planner</b> · Turn priorities into action plans with clear owners.</div>
+        <div class="row"><b>Academy</b> · Assign trainings by role and run classroom sessions.</div>
+        <div class="step-note" style="font-size:12.5px;padding-top:8px">Use one, two or all three. Each works on its own.</div>
+      </div>
+      <button class="re-step" type="button" aria-expanded="false" data-toggle="stepm2 stepd2" data-single="phil" aria-controls="stepd2">
+        <span class="n">03</span><span class="l">Perform.</span><span class="s">Make progress measurable.</span><span class="c"></span>
+      </button>
+      <div id="stepm2" class="step-mob re-mob-only re-fade" hidden>
+        <div class="disp" style="font-size:20px;line-height:27px;margin-bottom:8px">Make improvement measurable.</div>
+        <p style="margin:0 0 8px;font-size:15px;line-height:24px;color:#3E5248">Monitor performance, reinforce standards, and keep improving long after the initial changes.</p>
+        <div class="row"><b>Consultancy</b> · Review results and provide ongoing advisory.</div>
+        <div class="row"><b>Planner</b> · Measure weekly P&amp;L, business health, and progress.</div>
+        <div class="row"><b>Academy</b> · Track learning completion, assessments, and certifications.</div>
+        <div class="step-note" style="font-size:12.5px;padding-top:8px">Use one, two or all three. Each works on its own.</div>
+      </div>
     </div>
-  </section>
+    <div id="stepd0" class="step-desk re-desk-only re-fade" role="region" aria-label="Rethink" hidden>
+      <div style="flex:1 1 380px;min-width:0">
+        <div class="eyebrow gold" style="margin-bottom:12px">01 · Rethink.</div>
+        <div class="disp" style="font-size:30px;line-height:38px;margin-bottom:12px">See the bigger picture.</div>
+        <p style="margin:0;font-size:17px;line-height:27px;color:#3E5248">Challenge assumptions, uncover opportunities, and define a clear direction for the business.</p>
+      </div>
+      <div style="flex:1.2 1 440px;min-width:0;display:flex;flex-direction:column">
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Consultancy</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Review the concept, the operation, and the numbers on site.</div></div>
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Planner</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Build the business plan, budget, and forecast.</div></div>
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Academy</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Assess team skills and identify training gaps.</div></div>
+        <div class="step-note">Use one, two or all three. Each works on its own.</div>
+      </div>
+    </div>
+    <div id="stepd1" class="step-desk re-desk-only re-fade" role="region" aria-label="Rebuild" hidden>
+      <div style="flex:1 1 380px;min-width:0">
+        <div class="eyebrow gold" style="margin-bottom:12px">02 · Rebuild.</div>
+        <div class="disp" style="font-size:30px;line-height:38px;margin-bottom:12px">Turn strategy into action.</div>
+        <p style="margin:0;font-size:17px;line-height:27px;color:#3E5248">Strengthen operations, develop people, and put the right systems in place.</p>
+      </div>
+      <div style="flex:1.2 1 440px;min-width:0;display:flex;flex-direction:column">
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Consultancy</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Redesign menus, SOPs, and service standards with your team.</div></div>
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Planner</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Turn priorities into action plans with clear owners.</div></div>
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Academy</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Assign trainings by role and run classroom sessions.</div></div>
+        <div class="step-note">Use one, two or all three. Each works on its own.</div>
+      </div>
+    </div>
+    <div id="stepd2" class="step-desk re-desk-only re-fade" role="region" aria-label="Perform" hidden>
+      <div style="flex:1 1 380px;min-width:0">
+        <div class="eyebrow gold" style="margin-bottom:12px">03 · Perform.</div>
+        <div class="disp" style="font-size:30px;line-height:38px;margin-bottom:12px">Make improvement measurable.</div>
+        <p style="margin:0;font-size:17px;line-height:27px;color:#3E5248">Monitor performance, reinforce standards, and keep improving long after the initial changes.</p>
+      </div>
+      <div style="flex:1.2 1 440px;min-width:0;display:flex;flex-direction:column">
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Consultancy</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Review results and provide ongoing advisory.</div></div>
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Planner</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Measure weekly P&amp;L, business health, and progress.</div></div>
+        <div class="row"><div class="eyebrow gold" style="flex:0 0 130px;padding-top:3px">Academy</div><div style="flex:1 1 240px;font-size:16px;line-height:25px">Track learning completion, assessments, and certifications.</div></div>
+        <div class="step-note">Use one, two or all three. Each works on its own.</div>
+      </div>
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- THE PEOPLE BEHIND RE. -->
+<section id="about" class="sec">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:56px;align-items:center">
+    <img class="re-portrait" src="/assets/img/charbel-portrait.webp" alt="Charbel Basbous, Co-Founder and Managing Director of Re." width="896" height="1120" loading="lazy" style="flex:0 1 420px;width:420px;max-width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:16px;display:block">
+    <div style="flex:1 1 460px;min-width:0">
+      <div class="eyebrow gold" style="margin-bottom:14px;font-size:13px">The people behind Re.</div>
+      <h2 class="disp h2" style="margin:0 0 20px">We've been on your side of the business.</h2>
+      <p style="margin:0 0 32px;font-size:18px;line-height:29px;color:#3E5248;max-width:620px">We've managed the teams, faced the operational challenges, and been accountable for the numbers. Re. brings that experience to every engagement.</p>
+      <div style="border-top:1px solid #DDD6C8;padding-top:22px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;max-width:620px">
+        <div><div class="disp" style="font-size:20px;margin-bottom:2px">Charbel Basbous</div><div style="color:#57695E;font-size:15px">Co-Founder &amp; Managing Director</div></div>
+        <a href="/about/" class="link-gold" style="font-size:16px">Read the full story&nbsp;&nbsp;↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LET'S TALK -->
+<section class="m-pb-40" style="padding:0 0 80px">
+  <div class="wrap">
+   <div class="panel-dark">
+    <div class="eyebrow" style="color:#D4AF37;margin-bottom:14px;font-size:13px">Let's talk</div>
+    <h2 class="disp h2" style="margin:0 0 16px">Good conversations lead to better decisions.</h2>
+    <p style="margin:0;color:#DCD5C6;font-size:18px;line-height:29px;max-width:760px">Every business has its challenges and opportunities. Let's talk about yours.</p>
+    <div style="border-top:1px solid rgba(246,242,234,.2);margin-top:36px;padding-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px">
+      <div style="display:flex;flex-direction:column"><div class="eyebrow" style="color:#D4AF37;margin-bottom:12px">For your business</div><h3 class="disp" style="font-size:26px;line-height:32px;margin:0 0 10px">Let's talk about your operation.</h3><p style="margin:0 0 24px;color:#DCD5C6;font-size:16px;line-height:26px;flex-grow:1">Explore your challenges, opportunities, and the support your business needs.</p><a href="/contact/#consultation" class="btn-ivory re-full" style="align-self:flex-start">Book a consultation&nbsp;&nbsp;↗</a></div>
+      <div style="display:flex;flex-direction:column"><div class="eyebrow" style="color:#D4AF37;margin-bottom:12px">For the platforms</div><h3 class="disp" style="font-size:26px;line-height:32px;margin:0 0 10px">See Re. in action.</h3><p style="margin:0 0 24px;color:#DCD5C6;font-size:16px;line-height:26px;flex-grow:1">Discover how Planner and Academy support business performance and team development.</p><a href="/contact/#demo" class="btn-line" style="align-self:flex-start;padding:12px 20px;font-size:14px">Request a demo&nbsp;&nbsp;↗</a></div>
+    </div>
+   </div>
+  </div>
+</section>
 </main>
-
-<footer class="site-footer">
-  <div class="shell site-footer__inner">
-    <div class="site-footer__lead">
-      <h2 class="site-footer__title">Get in touch</h2>
-      <a class="foot-btn" href="/contact/">Contact us<span class="foot-btn__dot" aria-hidden="true"></span></a>
-    </div>
-
-    <div class="foot-cols">
-      <div class="foot-col">
-        <h3 class="foot-col__head">Work with us</h3>
-        <a class="foot-col__link" href="mailto:Hello@re-consultancy.me">Hello@re-consultancy.me</a>
-      </div>
-
-      <div class="foot-col">
-        <h3 class="foot-col__head">Follow</h3>
-        <div class="foot-social">
-          <a href="https://www.instagram.com/re.consultancy/" target="_blank" rel="noopener" aria-label="Re. on Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-              <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"/>
-              <circle cx="12" cy="12" r="4.2"/>
-              <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/company/re.consultancy" target="_blank" rel="noopener" aria-label="Re. on LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
-              <circle cx="5" cy="4.9" r="1.4" fill="currentColor" stroke="none"/>
-              <path d="M5 9.4V19"/>
-              <path d="M11.2 19V9.4"/>
-              <path d="M11.2 14a3.9 3.9 0 0 1 7.8 0v5"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="foot-col">
-        <h3 class="foot-col__head">Our location</h3>
-        <p class="foot-col__text">Masdar City Free Zone,<br>Abu Dhabi, United Arab Emirates</p>
-      </div>
-    </div>
-
-    <div class="foot-bar">
-      <span class="wordmark wordmark--footer"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></span>
-      <span class="foot-bar__tag">Rethink. Rebuild. Perform.</span>
-      <span class="foot-bar__legal">© 2026 Re. LLC</span>
-    </div>
+<footer class="ftr">
+  <div class="wrap">
+    <img src="/assets/img/re-logo.png" alt="Re-" width="934" height="430">
+    <span>Rethink. Rebuild. Perform. · Re. LLC · UAE</span>
+    <a href="/consultancy/">Consultancy</a>
+    <a href="/planner/">Planner</a>
+    <a href="/academy/">Academy</a>
+    <a href="/about/">About</a>
+    <a href="/insights/">Insights</a>
+    <a href="/contact/">Contact</a>
+    <a href="https://app.re-consultancy.me/">Client login</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
   </div>
 </footer>
-
-<script src="assets/js/site.js?v=dev" defer></script>
-</body>
-</html>
-
-<script src="assets/js/site.js?v=dev" defer></script>
+<script src="/assets/js/re.js?v=dev" defer></script>
 </body>
 </html>
