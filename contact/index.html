@@ -3,156 +3,149 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | Re.</title>
-<meta name="description" content="Start a conversation with Re. Leave your details and we'll come back within two working days, or take the four-minute project intake.">
+<title>Contact Re. | Book a consultation or request a demo</title>
+<meta name="description" content="Talk to Re. about a consultation, a demo of Re. Planner and Re. Academy, or a partnership for several venues. We reply within two working days.">
 <meta name="theme-color" content="#1B2E27">
 <link rel="canonical" href="https://re-consultancy.me/contact/">
-
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contact | Re.">
-<meta property="og:description" content="Start a conversation with Re. Leave your details and we'll come back within two working days, or take the four-minute project intake.">
+<meta property="og:site_name" content="Re.">
+<meta property="og:title" content="Contact Re. | Book a consultation or request a demo">
+<meta property="og:description" content="Talk to Re. about a consultation, a demo of Re. Planner and Re. Academy, or a partnership for several venues. We reply within two working days.">
+<meta property="og:url" content="https://re-consultancy.me/contact/">
 <meta property="og:image" content="https://re-consultancy.me/assets/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
-
 <link rel="icon" href="/assets/img/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-
-<link rel="preload" href="/assets/fonts/poppins-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/jetbrainsmono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/fonts.css?v=dev">
-<link rel="stylesheet" href="/assets/css/styles.css?v=dev">
+<link rel="stylesheet" href="/assets/css/re.css?v=dev">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="shell site-header__inner">
-    <a class="wordmark" href="/" aria-label="Re. home"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></a>
-    <nav class="site-nav" aria-label="Primary">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="/" aria-label="Re. home"><img src="/assets/img/re-logo.png" alt="Re-" width="934" height="430"></a>
+    <nav class="re-nav" aria-label="Main">
       <a href="/consultancy/">Consultancy</a>
       <a href="/planner/">Planner</a>
       <a href="/academy/">Academy</a>
       <a href="/about/">About</a>
+      <a href="/contact/" aria-current="page">Contact</a>
     </nav>
-    <a class="site-nav__cta" href="/contact/">Contact</a>
+    <div class="hdr__actions">
+      <a class="re-login" href="https://app.re-consultancy.me/">Client login</a>
+      <a class="btn re-talk" href="/contact/#consultation">Let's talk</a>
+      <button class="re-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1B2E27" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </div>
   </div>
+  <nav id="mnav" class="mnav re-fade" aria-label="Mobile" hidden>
+    <div class="wrap">
+      <a class="mnav__link" href="/consultancy/">Consultancy</a>
+      <a class="mnav__link" href="/planner/">Planner</a>
+      <a class="mnav__link" href="/academy/">Academy</a>
+      <a class="mnav__link" href="/about/">About</a>
+      <a class="mnav__link" href="/contact/" aria-current="page">Contact</a>
+      <div class="mnav__ctas">
+        <a class="btn2" href="https://app.re-consultancy.me/">Client login</a>
+        <a class="btn" href="/contact/#consultation">Let's talk</a>
+      </div>
+    </div>
+  </nav>
 </header>
+<main id="main">
 
-<main>
-  <section class="shell contact" id="contact">
-    <div class="contact__copy">
-      <a class="btn-back" href="/">← Back to site</a>
-      <p class="kicker">Contact</p>
-      <h1>Start with a conversation. We'll take it from there.</h1>
-      <p class="contact__lede">Leave your details and we'll come back within two working days. Prefer to go deeper first? The intake takes four minutes.</p>
-      <a class="btn-gold" href="/intake/"><span>Start the intake</span><span class="btn-gold__arrow" aria-hidden="true">→</span></a>
-      <a class="contact__email" href="mailto:Hello@re-consultancy.me">Hello@re-consultancy.me</a>
+<section class="m-pad-40" style="padding:72px 0 80px">
+  <div class="wrap">
+    <div class="re-rise" style="max-width:760px;margin-bottom:36px">
+      <div class="eyebrow gold" style="margin-bottom:16px;font-size:13px">Contact</div>
+      <h1 class="disp re-h1" style="margin:0 0 16px;font-size:56px;line-height:62px">Start with a conversation.</h1>
+      <p style="margin:0;font-size:19px;line-height:30px;color:#3E5248">Tell us what you need. We reply within two working days.</p>
     </div>
 
-    <form class="contact__card" id="contact-form" novalidate>
-      <div class="field-grid">
-        <label class="field"><span>Name</span><input type="text" name="name" placeholder="Full name" autocomplete="name" required></label>
-        <label class="field"><span>Company / venue</span><input type="text" name="company" placeholder="Venue or group" autocomplete="organization"></label>
-        <label class="field"><span>Role</span><input type="text" name="role" placeholder="Owner, GM, F&amp;B Director…" autocomplete="organization-title"></label>
-        <label class="field"><span>City</span><input type="text" name="city" placeholder="Abu Dhabi, Dubai, Riyadh…" autocomplete="address-level2"></label>
-        <label class="field"><span>Email</span><input type="email" name="email" placeholder="you@company.com" autocomplete="email" required></label>
-        <label class="field"><span>Phone / WhatsApp</span><input type="tel" name="phone" placeholder="+971 …" autocomplete="tel"></label>
-      </div>
-
-      <div class="chip-group" data-chips="venue">
-        <p class="chip-group__label" id="lbl-venue">Venue type</p>
-        <div class="chip-row" role="group" aria-labelledby="lbl-venue">
-          <button type="button" class="chip" aria-pressed="false">Restaurant</button>
-          <button type="button" class="chip" aria-pressed="false">Café / bakery</button>
-          <button type="button" class="chip" aria-pressed="false">Bar / lounge</button>
-          <button type="button" class="chip" aria-pressed="false">Hotel F&amp;B</button>
-          <button type="button" class="chip" aria-pressed="false">Catering</button>
-          <button type="button" class="chip" aria-pressed="false">Group</button>
-        </div>
-      </div>
-
-      <div class="field-grid">
-        <div class="chip-group" data-chips="outlets">
-          <p class="chip-group__label" id="lbl-outlets">Number of outlets</p>
-          <div class="chip-row" role="group" aria-labelledby="lbl-outlets">
-            <button type="button" class="chip" aria-pressed="false">1</button>
-            <button type="button" class="chip" aria-pressed="false">2–3</button>
-            <button type="button" class="chip" aria-pressed="false">4–10</button>
-            <button type="button" class="chip" aria-pressed="false">10+</button>
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+      <div class="m-panel" style="flex:2 1 600px;min-width:0;background:#FFFFFF;border:1px solid #DDD6C8;border-radius:18px;padding:32px">
+        <form data-enquiry="contact" data-type="demo" data-tool="Both" data-source="/contact/" data-done="kdone" novalidate>
+          <fieldset style="border:0;margin:0 0 24px;padding:0">
+            <legend class="disp" style="font-size:20px;margin-bottom:14px;padding:0">What would you like to talk about?</legend>
+            <div role="radiogroup" aria-label="Enquiry type" data-tabs="ctype" data-attr="aria-checked" data-current="demo" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:10px">
+                <button class="re-type" type="button" role="radio" aria-checked="false" data-key="consultation"><span class="l">A consultation</span><span class="s">A concept, an opening or an existing venue</span></button>
+                <button class="re-type" type="button" role="radio" aria-checked="true" data-key="demo"><span class="l">A demo</span><span class="s">See Re. Planner and Re. Academy</span></button>
+                <button class="re-type" type="button" role="radio" aria-checked="false" data-key="partnership"><span class="l">A partnership</span><span class="s">Several venues, tools and ongoing advisory</span></button>
+            </div>
+          </fieldset>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
+            <div class="re-f"><label for="k1">Name <span class="req" aria-hidden="true">*</span></label><input id="k1" name="name" autocomplete="name" required></div>
+            <div class="re-f"><label for="k2">Work email <span class="req" aria-hidden="true">*</span></label><input id="k2" name="email" type="email" autocomplete="email" required></div>
+            <div class="re-f"><label for="k3">Phone / WhatsApp</label><input id="k3" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="re-f"><label for="k4">Company / venue</label><input id="k4" name="company" autocomplete="organization"></div>
+            <div data-panel="ctype" data-key="consultation" hidden style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
+              <div class="re-f"><label for="k5">Business type</label><select id="k5" name="business_type"><option>Restaurant group</option><option>Independent restaurant</option><option>New opening</option><option>Hotel F&amp;B</option><option>Café / bakery</option><option>Investor / developer</option></select></div>
+              <div class="re-f"><label for="k6">Number of venues</label><select id="k6" name="venues"><option>Not open yet</option><option>1</option><option>2–5</option><option>6–10</option><option>10+</option></select></div>
+              <div class="re-f" style="grid-column:1/-1"><label for="k7">Main challenge</label><select id="k7" name="challenge"><option>Profitability and cost control</option><option>Opening a new venue</option><option>Guest experience and positioning</option><option>Feasibility or investment review</option><option>Something else</option></select></div>
+            </div>
+            <fieldset data-panel="ctype" data-key="demo" style="grid-column:1/-1;border:0;margin:0;padding:0">
+              <legend style="font-size:13px;font-weight:600;margin-bottom:8px;padding:0">Which tools?</legend>
+              <div role="radiogroup" aria-label="Which tools" data-tabs="ctool" data-attr="aria-checked" data-current="both" style="display:flex;flex-wrap:wrap;gap:8px">
+                    <button class="re-tool" type="button" role="radio" aria-checked="true" data-key="both">Both</button>
+                    <button class="re-tool" type="button" role="radio" aria-checked="false" data-key="planner">Re. Planner</button>
+                    <button class="re-tool" type="button" role="radio" aria-checked="false" data-key="academy">Re. Academy</button>
+              </div>
+            </fieldset>
+            <div data-panel="ctype" data-key="partnership" hidden style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
+              <div class="re-f"><label for="k8">Number of venues</label><select id="k8" name="p_venues"><option>2–5</option><option>6–10</option><option>10+</option></select></div>
+              <div class="re-f"><label for="k9">Support required</label><select id="k9" name="p_support"><option>Tools and advisory</option><option>Advisory only</option><option>Tools for the whole group</option></select></div>
+              <div class="re-f" style="grid-column:1/-1"><label for="k10">Preferred engagement</label><select id="k10" name="p_engagement"><option>Monthly reviews</option><option>Quarterly reviews</option><option>Not sure yet</option></select></div>
+            </div>
+            <div class="re-f" style="grid-column:1/-1"><label for="k11">Tell us briefly <span class="opt">(optional)</span></label><textarea id="k11" name="message"></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="k12">Leave empty</label><input id="k12" name="_gotcha" tabindex="-1" autocomplete="off"></div>
           </div>
-        </div>
-        <div class="chip-group" data-chips="method">
-          <p class="chip-group__label" id="lbl-method">Preferred contact</p>
-          <div class="chip-row" role="group" aria-labelledby="lbl-method">
-            <button type="button" class="chip" aria-pressed="false">Email</button>
-            <button type="button" class="chip" aria-pressed="false">WhatsApp</button>
-            <button type="button" class="chip" aria-pressed="false">Call</button>
+          <p class="form-err" role="alert" hidden style="margin-top:16px"></p>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:22px">
+            <button type="submit" class="btn re-full" style="cursor:pointer;padding:15px 28px;font-size:15px">Request a demo</button>
+            <a href="/intake/" style="font-size:13px;color:#57695E">Or take the optional 4-minute intake</a>
           </div>
+        </form>
+        <div id="kdone" class="re-fade" hidden tabindex="-1" style="padding:24px 4px">
+          <div class="eyebrow gold" style="margin-bottom:12px">Received · <span data-type-label></span></div>
+          <div class="disp" style="font-size:32px;line-height:40px;margin-bottom:12px">Thank you. We'll be in touch.</div>
+          <p style="margin:0 0 24px;color:#3E5248;font-size:17px;line-height:27px">Expect a reply from us within two working days, by email or WhatsApp.</p>
+          <a href="/" class="btn2">Back to the homepage</a>
         </div>
       </div>
 
-      <div class="contact__foot">
-        <span class="contact__note" id="contact-note" role="status">Name and email are required.</span>
-        <button type="submit" class="btn-solid" id="contact-send" style="opacity:0.4" disabled>Send</button>
-      </div>
-    </form>
-
-    <div class="thanks" id="contact-thanks" hidden>
-      <span class="thanks__dot" aria-hidden="true"></span>
-      <h2>Thank you. We'll be in touch.</h2>
-      <p>Charbel replies within two working days, usually with a question or two of his own.</p>
+      <aside style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:18px">
+        <div style="background:#F6F2EA;border-radius:18px;padding:28px">
+          <h2 class="eyebrow gold" style="margin:0 0 16px">What happens next</h2>
+          <ol class="steps-list">
+            <li><span class="dot">1</span><div><b>We reply</b><div class="d">Personal response within two working days.</div></div></li>
+            <li><span class="dot">2</span><div><b>We connect</b><div class="d" id="step2">Guided product walkthrough.</div></div></li>
+            <li><span class="dot">3</span><div><b>Next step</b><div class="d" id="step3">Tool recommendation and next steps.</div></div></li>
+          </ol>
+        </div>
+        <div style="font-size:14px;color:#57695E;padding:0 4px;line-height:24px">Already working with Re.? <a href="https://app.re-consultancy.me/" style="font-weight:600;color:#1B2E27">Access your workspace&nbsp;↗</a><br><a href="mailto:hello@re-consultancy.me" style="color:#57695E">hello@re-consultancy.me</a></div>
+      </aside>
     </div>
-  </section>
+  </div>
+</section>
 </main>
-
-<footer class="site-footer">
-  <div class="shell site-footer__inner">
-    <div class="site-footer__lead">
-      <h2 class="site-footer__title">Get in touch</h2>
-      <a class="foot-btn" href="/contact/">Contact us<span class="foot-btn__dot" aria-hidden="true"></span></a>
-    </div>
-
-    <div class="foot-cols">
-      <div class="foot-col">
-        <h3 class="foot-col__head">Work with us</h3>
-        <a class="foot-col__link" href="mailto:Hello@re-consultancy.me">Hello@re-consultancy.me</a>
-      </div>
-
-      <div class="foot-col">
-        <h3 class="foot-col__head">Follow</h3>
-        <div class="foot-social">
-          <a href="https://www.instagram.com/re.consultancy/" target="_blank" rel="noopener" aria-label="Re. on Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-              <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"/>
-              <circle cx="12" cy="12" r="4.2"/>
-              <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/company/re.consultancy" target="_blank" rel="noopener" aria-label="Re. on LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
-              <circle cx="5" cy="4.9" r="1.4" fill="currentColor" stroke="none"/>
-              <path d="M5 9.4V19"/>
-              <path d="M11.2 19V9.4"/>
-              <path d="M11.2 14a3.9 3.9 0 0 1 7.8 0v5"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="foot-col">
-        <h3 class="foot-col__head">Our location</h3>
-        <p class="foot-col__text">Masdar City Free Zone,<br>Abu Dhabi, United Arab Emirates</p>
-      </div>
-    </div>
-
-    <div class="foot-bar">
-      <span class="wordmark wordmark--footer"><span>Re</span><span class="wordmark__dash" aria-hidden="true"></span></span>
-      <span class="foot-bar__tag">Rethink. Rebuild. Perform.</span>
-      <span class="foot-bar__legal">© 2026 Re. LLC</span>
-    </div>
+<footer class="ftr">
+  <div class="wrap">
+    <img src="/assets/img/re-logo.png" alt="Re-" width="934" height="430">
+    <span>Rethink. Rebuild. Perform. · Re. LLC · UAE</span>
+    <a href="/consultancy/">Consultancy</a>
+    <a href="/planner/">Planner</a>
+    <a href="/academy/">Academy</a>
+    <a href="/about/">About</a>
+    <a href="/insights/">Insights</a>
+    <a href="/contact/">Contact</a>
+    <a href="https://app.re-consultancy.me/">Client login</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
   </div>
 </footer>
-
-<script src="/assets/js/site.js?v=dev" defer></script>
+<script src="/assets/js/re.js?v=dev" defer></script>
 </body>
 </html>

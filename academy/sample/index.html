@@ -945,3 +945,93 @@ body.trainer .stage{box-shadow:0 0 0 2px var(--gold),0 30px 80px -30px #000}
 .intro .row figure .ic{width:34px!important;height:34px!important;border-width:1.5px!important}
 .intro .row:has(>figure:nth-child(4):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}
 }</style>
+
+<!-- Sample certificate: shown after the trainee passes the final quiz (demo only). -->
+<style>
+#reCertBtn{position:fixed;right:20px;bottom:20px;z-index:9998;background:#D4AF37;color:#1B2E27;border:0;border-radius:999px;padding:14px 22px;font:600 15px/1 Inter,Arial,sans-serif;box-shadow:0 14px 34px rgba(0,0,0,.3);cursor:pointer}
+#reCertBtn:focus-visible{outline:3px solid #F6F2EA;outline-offset:3px}
+#reCert{position:fixed;inset:0;z-index:9999;background:rgba(16,28,23,.78);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:28px 16px;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+#reCert[hidden]{display:none}
+.rc-box{width:100%;max-width:880px;background:#FBF9F4;border-radius:18px;padding:24px;box-sizing:border-box;color:#1B2E27}
+.rc-top{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:18px}
+.rc-top label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;flex:1 1 260px}
+.rc-top input{height:46px;border:1px solid #8C877A;border-radius:8px;padding:0 12px;font:inherit;font-size:15px;background:#FFFFFF !important;color:#1B2E27 !important;box-shadow:none;width:100%;box-sizing:border-box}
+.rc-btn{height:46px;border-radius:8px;padding:0 18px;font:600 14px Inter,Arial,sans-serif;cursor:pointer;border:1px solid #8C877A;background:#fff;color:#1B2E27}
+.rc-btn.dark{background:#1B2E27;color:#F6F2EA;border-color:#1B2E27}
+.rc-cert{position:relative;overflow:hidden;background:#FFFFFF;border:1px solid #DDD6C8;border-radius:12px;aspect-ratio:1.414/1;padding:5.5% 7%;box-sizing:border-box;display:flex;flex-direction:column;container-type:inline-size}
+.rc-cert::before{content:"";position:absolute;inset:2.2%;border:2px solid #1B2E27;border-radius:6px;pointer-events:none}
+.rc-cert::after{content:"";position:absolute;inset:3.2%;border:1px solid #D4AF37;border-radius:4px;pointer-events:none}
+.rc-wm{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%) rotate(-18deg);font:800 15cqw/1 "Inter Tight",Inter,Arial,sans-serif;letter-spacing:.08em;color:rgba(212,175,55,.13);pointer-events:none;white-space:nowrap}
+.rc-head{display:flex;justify-content:space-between;align-items:center;position:relative}
+.rc-head img{height:5cqw;width:auto;display:block}
+.rc-eb{font:500 1.35cqw/1.4 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:#7D6410}
+.rc-main{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative}
+.rc-title{font:800 4.6cqw/1.1 "Inter Tight",Inter,Arial,sans-serif;letter-spacing:-.02em;margin:0 0 2.5cqw}
+.rc-small{font-size:1.7cqw;color:#57695E;margin:0 0 1cqw}
+.rc-name{font:700 5.4cqw/1.15 "Inter Tight",Inter,Arial,sans-serif;letter-spacing:-.02em;border-bottom:2px solid #D4AF37;padding-bottom:1.2cqw;margin:0 0 2cqw;min-height:6cqw}
+.rc-course{font-size:2.1cqw;line-height:1.45;margin:0}
+.rc-course b{font-weight:600}
+.rc-foot{display:flex;justify-content:space-between;gap:4cqw;position:relative;font-size:1.5cqw;color:#3E5248}
+.rc-foot div{flex:1;border-top:1px solid #DDD6C8;padding-top:1cqw}
+.rc-foot b{display:block;color:#1B2E27;font-size:1.7cqw;margin-bottom:.3cqw}
+.rc-note{font-size:13px;line-height:20px;color:#57695E;margin:16px 0 0}
+.rc-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.rc-ctas a{display:inline-flex;align-items:center;height:46px;padding:0 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;background:#1B2E27;color:#F6F2EA}
+@media print{
+  html,body{background:#fff !important;min-height:0 !important;height:auto !important;overflow:visible !important}
+  html::before,html::after,body::before,body::after{display:none !important}
+  body > *:not(#reCert){display:none !important}
+  #reCert{position:fixed;inset:0;background:#fff !important;padding:0;display:flex !important;align-items:center;justify-content:center}
+  .rc-box{max-width:none;width:auto;padding:0;background:none;border-radius:0}
+  .rc-top,.rc-note,.rc-ctas{display:none !important}
+  .rc-cert{border:0;border-radius:0;width:255mm;height:180mm;aspect-ratio:auto;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{size:A4 landscape;margin:0}
+}
+</style>
+<button id="reCertBtn" type="button" hidden>View your sample certificate</button>
+<div id="reCert" role="dialog" aria-modal="true" aria-labelledby="rcHeading" hidden>
+  <div class="rc-box">
+    <div class="rc-top">
+      <label>Name on the certificate<input id="rcName" autocomplete="name" placeholder="Your name" maxlength="60"></label>
+      <button type="button" class="rc-btn dark" id="rcPrint">Print or save as PDF</button>
+      <button type="button" class="rc-btn" id="rcClose">Close</button>
+    </div>
+    <div class="rc-cert" id="rcCert">
+      <div class="rc-wm" aria-hidden="true">SAMPLE</div>
+      <div class="rc-head"><img src="/assets/img/re-logo.png" alt="Re-"><span class="rc-eb">Re. Academy · Sample certificate</span></div>
+      <div class="rc-main">
+        <h2 class="rc-title" id="rcHeading">Certificate of completion</h2>
+        <p class="rc-small">This certifies that</p>
+        <p class="rc-name" id="rcNameOut">Your name</p>
+        <p class="rc-course">has completed <b>Hospitality Principles</b>, a Guest Experience training on Re. Academy, and passed the final quiz with <b id="rcScore">5 of 5</b>.</p>
+      </div>
+      <div class="rc-foot">
+        <div><b id="rcDate"></b>Date completed</div>
+        <div><b>GX-01 · 8 minutes</b>Training</div>
+        <div><b>Re. Academy</b>Issued by</div>
+      </div>
+    </div>
+    <p class="rc-note">This is a sample certificate for the free preview, for demonstration only. In a team account, certificates are issued automatically, stored on each employee's profile and visible to managers in the training matrix.</p>
+    <div class="rc-ctas"><a href="/contact/#demo-academy">Request a Re. Academy demo</a></div>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('reCertBtn'), dlg=document.getElementById('reCert'),
+      nameIn=document.getElementById('rcName'), nameOut=document.getElementById('rcNameOut'), last=null;
+  document.getElementById('rcDate').textContent=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  document.addEventListener('quiz-result',function(e){
+    if(!e.detail||!e.detail.passed) return;
+    document.getElementById('rcScore').textContent=e.detail.score+' of '+e.detail.total;
+    btn.hidden=false;
+  });
+  function open(){ last=document.activeElement; dlg.hidden=false; nameIn.focus(); }
+  function close(){ dlg.hidden=true; if(last&&last.focus) last.focus(); }
+  btn.addEventListener('click',open);
+  document.getElementById('rcClose').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!dlg.hidden) close(); });
+  nameIn.addEventListener('input',function(){ nameOut.textContent=nameIn.value.trim()||'Your name'; });
+  document.getElementById('rcPrint').addEventListener('click',function(){ window.print(); });
+})();
+</script>
